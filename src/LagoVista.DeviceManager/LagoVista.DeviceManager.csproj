@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LagoVista.Core" Version="1.2.170-alpha0952" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.19271-pre2" />
+  </ItemGroup>
+
+    <ItemGroup>
+    <ProjectReference Include="..\..\LagoVista.Client.Core\LagoVista.Client.Core.csproj" />
+    <ProjectReference Include="..\..\LagoVista.DeviceManager.Core\LagoVista.DeviceManager.Core.csproj" />
+    <ProjectReference Include="..\..\LagoVista.XPlat.Core\LagoVista.XPlat.Core.csproj" />
+    <ProjectReference Include="..\..\LagoVista.XPlat.iOS\LagoVista.XPlat.iOS.csproj" />
+  </ItemGroup>
+
+</Project>
