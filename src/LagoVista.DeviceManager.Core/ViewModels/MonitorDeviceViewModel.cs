@@ -3,7 +3,6 @@ using LagoVista.Client.Core.ViewModels;
 using LagoVista.Core.Models.UIMetaData;
 using LagoVista.IoT.DeviceManagement.Core.Models;
 using System.Threading.Tasks;
-using LagoVista.IoT.Runtime.Core.Models.Messaging;
 using System;
 using System.Linq;
 using System.Diagnostics;
@@ -14,6 +13,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using LagoVista.IoT.DeviceAdmin.Models;
 using System.Net.Http;
+using LagoVista.Client.Core.Models;
 
 namespace LagoVista.DeviceManager.Core.ViewModels
 {
@@ -113,6 +113,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
             DeviceStatusVisible = true;
             InputCommandVisible = false;
         }
+
 
         public override void HandleMessage(Notification notification)
         {

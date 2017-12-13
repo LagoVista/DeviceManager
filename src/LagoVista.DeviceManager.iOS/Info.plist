@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Device Manager</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.software-logistics.nuviot.device-manager</string>
+	<string>com.software-logistics.devicemanager.localdev</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UIAppFonts</key>
@@ -86,13 +86,15 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>nuviot</string>
-        <string>nuviotdevice</string>
+				<string>nuviotdevice</string>
 			</array>
 		</dict>
 	</array>
-  <key>UIBackgroundModes</key>
-  <array>
-    <string>remote-notification</string>
-  </array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>CFBundleName</key>
+	<string>Device Manager</string>
 </dict>
 </plist>

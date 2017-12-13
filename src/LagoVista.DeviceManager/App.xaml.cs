@@ -1,7 +1,7 @@
 ﻿//#define ENV_LOCAL
 //#define ENV_DEV
-//#define ENV_PROD
-#define ENV_LIVE
+//#define ENV_STAGE
+#define ENV_MASTER
 
 
 using LagoVista.Client.Core;
@@ -38,11 +38,11 @@ namespace LagoVista.DeviceManager
 
         private void InitServices()
         {
-#if ENV_PROD
+#if ENV_STAGE
             var serverInfo = new ServerInfo()
             {
                 SSL = true,
-                RootUrl = "api.nuviot.com",
+                RootUrl = "stage-api.nuviot.com",
             };
 #elif ENV_DEV
             var serverInfo = new ServerInfo()
@@ -56,7 +56,7 @@ namespace LagoVista.DeviceManager
                 SSL = false,
                 RootUrl = "localhost:5001",
             };
-#elif ENV_LIVE
+#elif ENV_MASTER
             var serverInfo = new ServerInfo()
             {
                 SSL = true,
