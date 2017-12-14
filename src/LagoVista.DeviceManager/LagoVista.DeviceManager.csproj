@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
-    <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>  </PropertyGroup>
-
+    <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
+    <DebugType>PdbOnly</DebugType>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
     <PackageReference Include="LagoVista.Core" Version="1.2.181-alpha1716" />

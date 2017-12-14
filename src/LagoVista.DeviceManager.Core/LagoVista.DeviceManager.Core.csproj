@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
     <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
+    <DebugType>PdbOnly</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
