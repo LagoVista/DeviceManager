@@ -217,13 +217,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LagoVista.Core">
-      <Version>1.2.160-alpha1317</Version>
+      <Version>
+      </Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core.Authentication">
-      <Version>1.2.160-alpha1317</Version>
+      <Version>
+      </Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core.Networking">
-      <Version>1.2.160-alpha1317</Version>
+      <Version>
+      </Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.Mobile.Analytics">
       <Version>0.16.0</Version>

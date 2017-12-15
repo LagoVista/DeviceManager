@@ -5,11 +5,15 @@
     <DebugType>PdbOnly</DebugType>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.211-alpha1527" />
+    <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models" Version="1.2.211-alpha1209" />
+    <PackageReference Include="LagoVista.IoT.DeviceManagement.Models" Version="1.2.211-alpha1209" />
+    <PackageReference Include="LagoVista.UserAdmin.Models" Version="1.2.211-alpha1209" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.211-alpha1828" />
+    <PackageReference Include="LagoVista.XPlat.Core" Version="1.2.211-alpha1527" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
-    <PackageReference Include="LagoVista.Core" Version="1.2.181-alpha1716" />
-    <PackageReference Include="LagoVista.Client.Core" Version="1.2.209-alpha1059" />
+    <PackageReference Include="LagoVista.Core" Version="1.2.211-alpha1209" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\LagoVista.DeviceManager.Core\LagoVista.DeviceManager.Core.csproj" />
   </ItemGroup>
