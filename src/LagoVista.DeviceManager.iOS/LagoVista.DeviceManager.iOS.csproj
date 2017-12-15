@@ -110,6 +110,32 @@
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
     <None Include="packages.config" />
+    <BundleResource Include="Resources\Fonts\iconize-entypoplus.ttf" />
+    <BundleResource Include="Resources\Fonts\iconize-fontawesome.ttf" />
+    <BundleResource Include="Resources\Fonts\iconize-ionicons.ttf" />
+    <BundleResource Include="Resources\Fonts\iconize-material.ttf" />
+    <BundleResource Include="Resources\Fonts\iconize-meteocons.ttf" />
+    <BundleResource Include="Resources\Fonts\iconize-simplelineicons.ttf" />
+    <BundleResource Include="Resources\Fonts\iconize-typicons.ttf" />
+    <BundleResource Include="Resources\Fonts\iconize-weathericons.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Black.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-BlackItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Bold.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-BoldItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Italic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Light.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-LightItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Medium.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-MediumItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Thin.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-ThinItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\RobotoCondensed-Bold.ttf" />
+    <BundleResource Include="Resources\Fonts\RobotoCondensed-BoldItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\RobotoCondensed-Italic.ttf" />
+    <BundleResource Include="Resources\Fonts\RobotoCondensed-Light.ttf" />
+    <BundleResource Include="Resources\Fonts\RobotoCondensed-LightItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\RobotoCondensed-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -146,7 +172,7 @@
       <HintPath>..\..\packages\LagoVista.UserAdmin.Models.1.2.211-alpha1209\lib\netstandard1.2\LagoVista.UserAdmin.Models.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.XPlat.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.XPlat.1.2.211-alpha1828\lib\Xamarin.iOS10\LagoVista.XPlat.iOS.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.XPlat.1.2.212-alpha0958\lib\Xamarin.iOS10\LagoVista.XPlat.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -232,9 +258,6 @@
     </Reference>
     <Reference Include="LagoVista.MQTT.Core">
       <HintPath>..\..\packages\LagoVista.MQTT.Core.1.2.209-alpha1059\lib\netstandard1.3\LagoVista.MQTT.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="LagoVista.XPlat.Core">
-      <HintPath>..\..\packages\LagoVista.XPlat.Core.1.2.209-alpha1059\lib\netstandard1.3\LagoVista.XPlat.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
