@@ -172,10 +172,10 @@
       <HintPath>..\..\packages\LagoVista.UserAdmin.Models.1.2.211-alpha1209\lib\netstandard1.2\LagoVista.UserAdmin.Models.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.XPlat.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.XPlat.1.2.213-alpha1322\lib\Xamarin.iOS10\LagoVista.XPlat.Core.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.XPlat.1.2.213-alpha1426\lib\Xamarin.iOS10\LagoVista.XPlat.Core.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.XPlat.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.XPlat.1.2.213-alpha1322\lib\Xamarin.iOS10\LagoVista.XPlat.iOS.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.XPlat.1.2.213-alpha1426\lib\Xamarin.iOS10\LagoVista.XPlat.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
