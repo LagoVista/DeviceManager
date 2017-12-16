@@ -69,32 +69,32 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\font\iconizeentypoplus.ttf" />
-    <AndroidAsset Include="Resources\font\iconizefontawesome.ttf" />
-    <AndroidAsset Include="Resources\font\iconizeionicons.ttf" />
-    <AndroidAsset Include="Resources\font\iconizematerial.ttf" />
-    <AndroidAsset Include="Resources\font\iconizemeteocons.ttf" />
-    <AndroidAsset Include="Resources\font\iconizesimplelineicons.ttf" />
-    <AndroidAsset Include="Resources\font\iconizetypicons.ttf" />
-    <AndroidAsset Include="Resources\font\iconizeweathericons.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoBlack.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoBlackItalic.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoBold.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoBoldItalic.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoCondensedBold.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoCondensedBoldItalic.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoCondensedItalic.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoCondensedLight.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoCondensedLightItalic.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoCondensedRegular.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoItalic.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoLight.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoLightItalic.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoMedium.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoMediumItalic.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoRegular.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoThin.ttf" />
-    <AndroidAsset Include="Resources\font\RobotoThinItalic.ttf" />
+    <AndroidAsset Include="Assets\font\iconizeentypoplus.ttf" />
+    <AndroidAsset Include="Assets\font\iconizefontawesome.ttf" />
+    <AndroidAsset Include="Assets\font\iconizeionicons.ttf" />
+    <AndroidAsset Include="Assets\font\iconizematerial.ttf" />
+    <AndroidAsset Include="Assets\font\iconizemeteocons.ttf" />
+    <AndroidAsset Include="Assets\font\iconizesimplelineicons.ttf" />
+    <AndroidAsset Include="Assets\font\iconizetypicons.ttf" />
+    <AndroidAsset Include="Assets\font\iconizeweathericons.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoBlack.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoBlackItalic.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoBold.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoCondensedBold.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoCondensedBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoCondensedItalic.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoCondensedLight.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoCondensedLightItalic.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoCondensedRegular.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoItalic.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoLight.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoLightItalic.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoMedium.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoMediumItalic.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoRegular.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoThin.ttf" />
+    <AndroidAsset Include="Assets\font\RobotoThinItalic.ttf" />
     <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
@@ -196,8 +196,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
