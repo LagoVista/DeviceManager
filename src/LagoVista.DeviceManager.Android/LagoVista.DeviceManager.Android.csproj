@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
-    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
@@ -69,32 +69,32 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Resources\Font\iconizeentypoplus.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\iconizefontawesome.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\iconizeionicons.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\iconizematerial.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\iconizemeteocons.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\iconizesimplelineicons.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\iconizetypicons.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\iconizeweathericons.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoBlack.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoBlackItalic.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoBold.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoBoldItalic.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoCondensedBold.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoCondensedBoldItalic.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoCondensedItalic.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoCondensedLight.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoCondensedLightItalic.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoCondensedRegular.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoItalic.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoLight.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoLightItalic.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoMedium.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoMediumItalic.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoRegular.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoThin.ttf" />
-    <AndroidAsset Include="Assets\Resources\Font\RobotoThinItalic.ttf" />
+    <AndroidAsset Include="Resources\font\iconizeentypoplus.ttf" />
+    <AndroidAsset Include="Resources\font\iconizefontawesome.ttf" />
+    <AndroidAsset Include="Resources\font\iconizeionicons.ttf" />
+    <AndroidAsset Include="Resources\font\iconizematerial.ttf" />
+    <AndroidAsset Include="Resources\font\iconizemeteocons.ttf" />
+    <AndroidAsset Include="Resources\font\iconizesimplelineicons.ttf" />
+    <AndroidAsset Include="Resources\font\iconizetypicons.ttf" />
+    <AndroidAsset Include="Resources\font\iconizeweathericons.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoBlack.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoBlackItalic.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoBold.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoBoldItalic.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoCondensedBold.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoCondensedBoldItalic.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoCondensedItalic.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoCondensedLight.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoCondensedLightItalic.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoCondensedRegular.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoItalic.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoLight.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoLightItalic.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoMedium.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoMediumItalic.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoRegular.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoThin.ttf" />
+    <AndroidAsset Include="Resources\font\RobotoThinItalic.ttf" />
     <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
@@ -195,6 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
