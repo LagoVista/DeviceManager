@@ -211,7 +211,7 @@
       </Version>
     </PackageReference>
     <PackageReference Include="LagoVista.XPlat">
-      <Version>1.2.213-alpha1144</Version>
+      <Version>1.2.213-alpha1322</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.Mobile.Analytics">
       <Version>0.17.1</Version>
