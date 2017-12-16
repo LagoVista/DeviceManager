@@ -104,7 +104,7 @@
       <Version>1.2.211-alpha1209</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.XPlat">
-      <Version>1.2.212-alpha1425</Version>
+      <Version>1.2.213-alpha1144</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.Mobile">
       <Version>0.17.1</Version>
