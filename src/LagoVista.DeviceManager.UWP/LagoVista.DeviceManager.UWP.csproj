@@ -190,26 +190,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\LagoVista.Client.Core\LagoVista.Client.Core.csproj">
-      <Project>{786a2d0b-c3e4-4d7a-89c5-86ebc94e1b45}</Project>
-      <Name>LagoVista.Client.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\LagoVista.Core.UWP\Core UWP.csproj">
-      <Project>{12f1d893-a53b-44d6-9a9a-2922d9e7e38a}</Project>
-      <Name>Core UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\LagoVista.MQTT.Core\LagoVista.MQTT.Core.csproj">
-      <Project>{076b08b6-234f-4ae3-8815-7e36a47f9475}</Project>
-      <Name>LagoVista.MQTT.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\LagoVista.XPlat.Core\LagoVista.XPlat.Core.csproj">
-      <Project>{d5dd4ca3-3b5c-4a0e-aa82-4cebb9a7160d}</Project>
-      <Name>LagoVista.XPlat.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\LagoVista.XPlat.UWP\LagoVista.XPlat.UWP.csproj">
-      <Project>{9ed662b0-40c9-4899-b11e-f10c3c9d6aeb}</Project>
-      <Name>LagoVista.XPlat.UWP</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LagoVista.DeviceManager\LagoVista.DeviceManager.csproj">
       <Project>{cdc5e8da-4beb-46d8-a921-678d6e24daa7}</Project>
       <Name>LagoVista.DeviceManager</Name>
@@ -217,16 +197,21 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LagoVista.Core">
-      <Version>
+      <Version>1.2.211-alpha1209
       </Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core.Authentication">
       <Version>
+        1.2.211-alpha1209
       </Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core.Networking">
       <Version>
+        1.2.211-alpha1209
       </Version>
+    </PackageReference>
+    <PackageReference Include="LagoVista.XPlat">
+      <Version>1.2.211-alpha1828</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.Mobile.Analytics">
       <Version>0.16.0</Version>
@@ -235,7 +220,7 @@
       <Version>6.0.1</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>10.0.3</Version>
+      <Version>11.0.1-beta1</Version>
     </PackageReference>
     <PackageReference Include="System.Net.Http">
       <Version>4.3.3</Version>
