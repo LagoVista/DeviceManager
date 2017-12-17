@@ -12,6 +12,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagoVista.DeviceManager.iOS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagoVista.DeviceManager.Droid", "src\LagoVista.DeviceManager.Droid\LagoVista.DeviceManager.Droid.csproj", "{E90DEDAC-C212-4872-9A2E-7A57C8701940}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BD7E03CA-451C-41DF-9BF0-C7992A3A13F6}"
+	ProjectSection(SolutionItems) = preProject
+		appcenter-post-clone.ps1 = appcenter-post-clone.ps1
+		appcenter-pre-build.sh = appcenter-pre-build.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU

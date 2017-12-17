@@ -23,7 +23,7 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>Device Manager</string>
+	<string>Device Mgr</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.software-logistics.devicemanager.localdev</string>
 	<key>CFBundleVersion</key>
@@ -95,6 +95,6 @@
 		<string>remote-notification</string>
 	</array>
 	<key>CFBundleName</key>
-	<string>Device Manager</string>
+	<string>Device Mgr</string>
 </dict>
 </plist>

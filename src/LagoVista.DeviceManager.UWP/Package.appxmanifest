@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="1a31deaa-51c0-44ec-93da-0415c468049b" Publisher="CN=kevinw" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="1a31deaa-51c0-44ec-93da-0415c468049b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="SoftwareLogisticsLLC.IoTDeviceManager" Publisher="CN=610EF21F-3A3C-4783-B4BF-B7C267BC0CA0" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="4b8f62c3-d73d-4c3b-983f-01aa981567fa" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>LagoVista.DeviceManager.UWP</DisplayName>
-    <PublisherDisplayName>kevinw</PublisherDisplayName>
+    <DisplayName>IoT Device Manager</DisplayName>
+    <PublisherDisplayName>Software Logistics LLC</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -15,18 +15,18 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="LagoVista.DeviceManager.UWP.App">
-        <uap:VisualElements DisplayName="IoT Device Manager" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Allow for Provisioning, Managing and Monitoring of Devices." BackgroundColor="transparent">
-          <uap:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\BadgeLogo.png" />
-          <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="IoT Simulator" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
-            <uap:ShowNameOnTiles>
-              <uap:ShowOn Tile="square150x150Logo" />
-              <uap:ShowOn Tile="wide310x150Logo" />
-              <uap:ShowOn Tile="square310x310Logo" />
-            </uap:ShowNameOnTiles>
-          </uap:DefaultTile>
-          <uap:SplashScreen Image="Assets\SplashScreen.png" />
-        </uap:VisualElements>
-      </Application>
+      <uap:VisualElements DisplayName="IoT Device Manager" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Allow for Provisioning, Managing and Monitoring of Devices." BackgroundColor="transparent">
+        <uap:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\BadgeLogo.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="IoT Simulator" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />

@@ -17,8 +17,9 @@
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>LagoVista.DeviceManager.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>LagoVista.DeviceManager.UWP_StoreKey.pfx</PackageCertificateKeyFile>
     <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
+    <PackageCertificateThumbprint>B2DA4A48A1B7F9DCE2AC26E91876D1051981F44C</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -128,6 +129,7 @@
     <Content Include="Assets\Fonts\RobotoCondensed-Light.ttf" />
     <Content Include="Assets\Fonts\RobotoCondensed-LightItalic.ttf" />
     <Content Include="Assets\Fonts\RobotoCondensed-Regular.ttf" />
+    <None Include="LagoVista.DeviceManager.UWP_StoreKey.pfx" />
     <None Include="LagoVista.DeviceManager.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +193,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="nuviot.png" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="softwarelogistics.png" />
     <Content Include="splashbg.jpg" />
@@ -218,7 +221,7 @@
       <Version>1.2.214-alpha1112</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.XPlat">
-      <Version>1.2.214-alpha1201</Version>
+      <Version>1.2.214-alpha1630</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.Mobile.Analytics">
       <Version>0.17.1</Version>
