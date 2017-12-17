@@ -6,7 +6,7 @@ using LagoVista.DeviceManager.Droid;
 
 namespace LagoVista.Droid.Simulator
 {
-    [Activity(Label = "Device Mnager", MainLauncher =true, NoHistory = true, Theme = "@style/Theme.Splash", ConfigurationChanges = ConfigChanges.ScreenLayout | ConfigChanges.Orientation )]
+    [Activity(Label = "IoT Device Manager", MainLauncher =true, NoHistory = true, Theme = "@style/Theme.Splash", ConfigurationChanges = ConfigChanges.ScreenLayout | ConfigChanges.Orientation )]
     public class SplashScreen : Activity
     {
         protected override void OnCreate(Bundle bundle)

@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace LagoVista.DeviceManager.Droid
 {
-    [Activity(Label = "Device Manager", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "IoT Device Manager", Icon = "@mipmap/icon", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         public const string MOBILE_CENTER_KEY = "5bbcacd9-cd4c-4f01-8715-9e9edf743ea0";
