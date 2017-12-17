@@ -6,9 +6,6 @@ plutil -replace CFBundleId -string $APPBUNDLEID $APPCENTER_SOURCE_DIRECTORY/src/
 # set the package name for Android
 sed -i '' 's/package.*=.*\".*\" /package=\"'"$PACKAGENAME"'\" /' $APPCENTER_SOURCE_DIRECTORY/src/LagoVista.Droid.Simulator/Properties/AndroidManifest.xml
 
-# set the app label Android
-sed -i '' 's/android:label.*=.*\".*\" /android:label=\"'"$APPNAME"'\" /' $APPCENTER_SOURCE_DIRECTORY/src/LagoVista.Droid.Simulator/Properties/AndroidManifest.xml
-
 # set android version number
 sed -i '' 's/android:versionCode.*=.*\".*\" /android:versionCode=\"'"$VERSIONCODE"'\" /' $APPCENTER_SOURCE_DIRECTORY/src/LagoVista.Droid.Simulator/Properties/AndroidManifest.xml
 

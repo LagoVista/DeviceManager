@@ -5,12 +5,12 @@
     <DebugType>PdbOnly</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="LagoVista.Client.Core" Version="1.2.214-alpha1630" />
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.214-alpha1736" />
     <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models" Version="1.2.214-alpha1112" />
     <PackageReference Include="LagoVista.Core" Version="1.2.214-alpha1112" />
     <PackageReference Include="LagoVista.IoT.DeviceManagement.Models" Version="1.2.214-alpha1112" />
     <PackageReference Include="LagoVista.UserAdmin.Models" Version="1.2.214-alpha1112" />
-    <PackageReference Include="LagoVista.XPlat" Version="1.2.214-alpha1630" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.214-alpha1736" />
     <PackageReference Include="Microsoft.Azure.Mobile.Analytics" Version="0.17.1" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1-beta1" />
   </ItemGroup>
