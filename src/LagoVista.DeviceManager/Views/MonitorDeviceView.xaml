@@ -48,7 +48,7 @@
                     <Label Text="{Binding Device.Status.Text}" Grid.Column="1" Grid.Row="1" FontSize="Small"  />
 
                     <Label Text="{trs:Translate MonitorDevice_LastContact}" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" TextColor="{StaticResource NuvIoTContrast}" FontSize="Small"  />
-                    <Label Text="{Binding Device.LastContact}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" FontSize="Small"  />
+                    <Label Text="{Binding Device.LastContact, Converter={StaticResource DatePrinterConverter}}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" FontSize="Small"  />
                 </Grid>
 
                 <Label Margin="10,10,0,4" Text="{trs:Translate MonitorDevice_Attributes}" Grid.Row="2" FontAttributes="Bold" FontSize="Medium"  TextColor="{StaticResource NuvIoTDark}" />
@@ -83,7 +83,7 @@
                                     <Label Text="Timestamp"  Grid.Row="1" FontAttributes="Bold" TextColor="{StaticResource NuvIoTContrast}" FontSize="Small" />
 
                                     <Label Text="{Binding MessageId}" Grid.Row="0" Grid.Column="1" FontSize="Small" />
-                                    <Label Text="{Binding Timestamp}"  Grid.Row="1" Grid.Column="1" FontSize="Small" />
+                                    <Label Text="{Binding Timestamp, Converter={StaticResource DatePrinterConverter}}"  Grid.Row="1" Grid.Column="1" FontSize="Small" />
 
                                     <pge:KVPRepeater ItemSource="{Binding Properties}" Grid.Row="2" Grid.ColumnSpan="2" LabelColor="{StaticResource NuvIoTContrast}" />
 
