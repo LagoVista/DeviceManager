@@ -113,9 +113,6 @@
     <PackageReference Include="LagoVista.IoT.Logging">
       <Version>1.2.214-alpha1112</Version>
     </PackageReference>
-    <PackageReference Include="LagoVista.IoT.Simulator.Models">
-      <Version>1.2.214-alpha1112</Version>
-    </PackageReference>
     <PackageReference Include="LagoVista.UserAdmin.Models">
       <Version>1.2.214-alpha1112</Version>
     </PackageReference>
