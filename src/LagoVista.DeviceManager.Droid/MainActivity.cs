@@ -2,10 +2,8 @@
 
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using LagoVista.Core.Models;
 
 namespace LagoVista.DeviceManager.Droid
 {
@@ -25,7 +23,25 @@ namespace LagoVista.DeviceManager.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+            var app = new App();
+
+            var packageInfo = PackageManager.GetPackageInfo(PackageName, 0);
+
+            var versionParts = packageInfo.VersionName.Split('.');
+            var versionInfo = new VersionInfo();
+            if (versionParts.Length != 4)
+            {
+                throw new Exception("Expecting android:versionName in AndroidManifest.xml to be a version conisting of four parts 1.0.218.1231 [Major].[Minor].[Build].[Revision]");
+            }
+
+            /* if this blows up our versionName in AndroidManaifest.xml is borked...make sure all version numbers are intergers like 1.0.218.1231 */
+            versionInfo.Major = Convert.ToInt32(versionParts[0]);
+            versionInfo.Minor = Convert.ToInt32(versionParts[1]);
+            versionInfo.Build = Convert.ToInt32(versionParts[2]);
+            versionInfo.Revision = Convert.ToInt32(versionParts[3]);
+            app.SetVersionInfo(versionInfo);
+
+            LoadApplication(app);
         }
     }
 }

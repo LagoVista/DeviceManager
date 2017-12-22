@@ -158,9 +158,6 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="LagoVista.Client.Core, Version=1.2.1.1, Culture=neutral, PublicKeyToken=d788b1c9b90dabea, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.Client.Core.1.2.216-alpha1559\lib\netstandard1.3\LagoVista.Client.Core.dll</HintPath>
-    </Reference>
     <Reference Include="LagoVista.Core, Version=0.8.0.0, Culture=neutral, PublicKeyToken=2698135e9954a85d, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LagoVista.Core.Networking.1.2.214-alpha1112\lib\netstandard1.2\LagoVista.Core.dll</HintPath>
     </Reference>
@@ -181,12 +178,6 @@
     </Reference>
     <Reference Include="LagoVista.UserAdmin.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LagoVista.UserAdmin.Models.1.2.214-alpha1112\lib\netstandard1.2\LagoVista.UserAdmin.Models.dll</HintPath>
-    </Reference>
-    <Reference Include="LagoVista.XPlat.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.XPlat.1.2.216-alpha1559\lib\Xamarin.iOS10\LagoVista.XPlat.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="LagoVista.XPlat.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.XPlat.1.2.216-alpha1559\lib\Xamarin.iOS10\LagoVista.XPlat.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -236,6 +227,15 @@
     </Reference>
     <Reference Include="Microsoft.Azure.Mobile.Crashes.iOS.Bindings">
       <HintPath>..\..\packages\Microsoft.Azure.Mobile.Crashes.0.17.1\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Crashes.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="LagoVista.XPlat.Core">
+      <HintPath>..\..\packages\LagoVista.XPlat.1.2.218-alpha1653\lib\Xamarin.iOS10\LagoVista.XPlat.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LagoVista.XPlat.iOS">
+      <HintPath>..\..\packages\LagoVista.XPlat.1.2.218-alpha1653\lib\Xamarin.iOS10\LagoVista.XPlat.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="LagoVista.Client.Core">
+      <HintPath>..\..\packages\LagoVista.Client.Core.1.2.218-alpha1653\lib\netstandard1.3\LagoVista.Client.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -314,7 +314,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LagoVista.DeviceManager\LagoVista.DeviceManager.csproj">
-      <Project>{048D6621-B599-4E17-ADA5-D51940CF7234}</Project>
+      <Project>{B42060CA-45D6-4524-BEEB-C08267FF0154}</Project>
       <Name>LagoVista.DeviceManager</Name>
     </ProjectReference>
     <ProjectReference Include="..\LagoVista.DeviceManager.Core\LagoVista.DeviceManager.Core.csproj">

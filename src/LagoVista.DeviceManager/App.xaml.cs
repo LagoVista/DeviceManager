@@ -1,7 +1,7 @@
 ﻿//#define ENV_LOCAL
-//#define ENV_DEV
+#define ENV_DEV
 //#define ENV_STAGE
-#define ENV_MASTER
+//#define ENV_MASTER
 
 
 using LagoVista.Client.Core;
@@ -20,12 +20,15 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using LagoVista.Core.Models;
 
 namespace LagoVista.DeviceManager
 {
     public partial class App : Application
     {
         static App _instance;
+
+        AppConfig _appConfig;
 
         public App()
         {
@@ -64,17 +67,11 @@ namespace LagoVista.DeviceManager
             };
 #endif
 
-
-
-            /* Configuring he IoC is something like this...be warned
-             * 
-             * https://www.youtube.com/watch?v=7-FbfkUD78w
-             */
-
             var clientAppInfo = new ClientAppInfo();
 
+            _appConfig = new AppConfig();
             SLWIOC.RegisterSingleton<IClientAppInfo>(clientAppInfo);
-            SLWIOC.RegisterSingleton<IAppConfig>(new AppConfig());
+            SLWIOC.RegisterSingleton<IAppConfig>(_appConfig);
 
             var navigation = new ViewModelNavigation(this);
             LagoVista.XPlat.Core.Startup.Init(this, navigation);
@@ -116,9 +113,13 @@ namespace LagoVista.DeviceManager
                     logger.AddCustomEvent(LogLevel.Error, "App_HandleURIActivation", "InvalidPageType - Not LagoVistaNavigationPage", new System.Collections.Generic.KeyValuePair<string, string>("type", this.MainPage.GetType().Name));
                 }
             }
-
         }
-    
+
+        public void SetVersionInfo(VersionInfo versionInfo)
+        {
+            _appConfig.Version = versionInfo;
+        }
+
         protected override void OnStart()
         {
             // Handle when your app starts

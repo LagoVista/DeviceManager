@@ -22,6 +22,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,9 +33,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup>
     <NoWarn>$(NoWarn);NU1605</NoWarn>
@@ -47,8 +46,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -95,9 +92,6 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LagoVista.Client.Core">
-      <Version>1.2.216-alpha1559</Version>
-    </PackageReference>
     <PackageReference Include="LagoVista.Core">
       <Version>1.2.214-alpha1112</Version>
     </PackageReference>
@@ -115,9 +109,6 @@
     </PackageReference>
     <PackageReference Include="LagoVista.UserAdmin.Models">
       <Version>1.2.214-alpha1112</Version>
-    </PackageReference>
-    <PackageReference Include="LagoVista.XPlat">
-      <Version>1.2.216-alpha1559</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.Mobile">
       <Version>0.17.1</Version>
@@ -142,6 +133,12 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>2.5.0.121934</Version>
+    </PackageReference>
+    <PackageReference Include="LagoVista.Client.Core">
+      <Version>1.2.218-alpha1653</Version>
+    </PackageReference>
+    <PackageReference Include="LagoVista.XPlat">
+      <Version>1.2.218-alpha1653</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -171,7 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LagoVista.DeviceManager\LagoVista.DeviceManager.csproj">
-      <Project>{4C041024-5803-456F-B635-2542ADC1BBA4}</Project>
+      <Project>{B42060CA-45D6-4524-BEEB-C08267FF0154}</Project>
       <Name>LagoVista.DeviceManager</Name>
     </ProjectReference>
     <ProjectReference Include="..\LagoVista.DeviceManager.Core\LagoVista.DeviceManager.Core.csproj">
