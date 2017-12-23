@@ -19,6 +19,8 @@ namespace LagoVista.DeviceManager
                 case Device.iOS: PlatformType = PlatformTypes.iPhone; break;
                 case Device.UWP: PlatformType = PlatformTypes.WindowsUWP; break;
             }
+
+            WebAddress = "https://www.IoTAppStudio.com";
         }
 
         public PlatformTypes PlatformType { get; private set; }
@@ -29,9 +31,9 @@ namespace LagoVista.DeviceManager
 
         public string AppName => "IoT Device Manager";
 
-        public string AppLogo => "";
+        public string AppLogo => "appicon.png";
 
-        public string CompanyLogo => "";
+        public string CompanyLogo => "slsys.png";
 #if DEBUG
         public bool EmitTestingCode => true;
 #else
@@ -42,5 +44,15 @@ namespace LagoVista.DeviceManager
         public string ClientType => "mobileapp";
 
         public VersionInfo Version { get; set; }
+
+        public string CompanyName => "Software Logistics, LLC";
+
+        public string CompanySiteLink => "https://support.nuviot.com/help.html#/information/company";
+
+        public string AppDescription => "IoT Device Manager is a free app provided by Software Logistics, LLC that will all you to manage and monitor devices from device repositores created with IoT App Studio.";
+
+        public string TermsAndConditionsLink => "https://app.termly.io/document/terms-of-use-for-saas/90eaf71a-610a-435e-95b1-c94b808f8aca";
+
+        public string PrivacyStatementLink => "https://app.termly.io/document/privacy-policy-for-website/f0b67cde-2a08-4fe8-a35e-5e4571545d00";
     }
 }

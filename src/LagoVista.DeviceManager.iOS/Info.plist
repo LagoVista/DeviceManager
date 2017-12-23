@@ -25,9 +25,9 @@
 	<key>CFBundleDisplayName</key>
 	<string>Device Mgr</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.software-logistics.devicemanager.localdev</string>
+	<string>com.software-logistics.devicemanager.dev</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.999.1003</string>
+	<string>1.0.999.5151</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Fonts/iconize-entypoplus.ttf</string>
@@ -97,6 +97,10 @@
 	<key>CFBundleName</key>
 	<string>Device Mgr</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.999.1003</string>
+	<string>1.0.999.5151</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>gamekit</string>
+	</array>
 </dict>
 </plist>

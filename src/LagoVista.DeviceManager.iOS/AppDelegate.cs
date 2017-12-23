@@ -12,10 +12,12 @@ namespace LagoVista.DeviceManager.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
-        public const string MOBILE_CENTER_KEY = "82b1c408-a2bf-42da-b285-eb56719ad2ed"; /* DEV */
+        public const string MOBILE_CENTER_KEY = "d4393516-07a8-4f2e-8e3c-bae5d57d8ff2"; /* DEV */
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Console.WriteLine("App Finished Launching");
+
             LagoVista.XPlat.iOS.Startup.Init(app, MOBILE_CENTER_KEY);
 
             UIApplication.SharedApplication.StatusBarStyle = UIStatusBarStyle.LightContent;
@@ -23,8 +25,12 @@ namespace LagoVista.DeviceManager.iOS
 
             global::Xamarin.Forms.Forms.Init();
             var formsApp = new App();
+            Console.WriteLine("Created App");
+
 
             var version = NSBundle.MainBundle.InfoDictionary[new NSString("CFBundleVersion")].ToString();
+            Console.WriteLine($"NSLog Version {version}");
+
             var versionParts = version.Split('.');
             var versionInfo = new VersionInfo();
             if(versionParts.Length != 4)
