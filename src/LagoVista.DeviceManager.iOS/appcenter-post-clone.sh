@@ -32,6 +32,10 @@ revision=`date +"%H%M"`
 # Version to be displayed to the user 1.0.219.0818
 fullVersion=$version.$buildNumber.$revision
 
+echo Setting Version
+echo $fullVersion
+cat $APPCENTER_SOURCE_DIRECTORY/src/$iOSProjectName/Info.plist
+
 plutil -replace CFBundleShortVersionString -string $fullVersion $APPCENTER_SOURCE_DIRECTORY/src/$iOSProjectName/Info.plist
 plutil -replace CFBundleVersion -string $fullVersion $APPCENTER_SOURCE_DIRECTORY/src/$iOSProjectName/Info.plist
 plutil -replace CFBundleIdentifier -string $APPBUNDLEID $APPCENTER_SOURCE_DIRECTORY/src/$iOSProjectName/Info.plist

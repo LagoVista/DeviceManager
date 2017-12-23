@@ -35,7 +35,7 @@ namespace LagoVista.DeviceManager.iOS
             var versionInfo = new VersionInfo();
             if(versionParts.Length != 4)
             {
-                throw new Exception("Expecting CFBundleVersion to be a version conisting of four parts 1.0.218.1231 [Major].[Minor].[Build].[Revision]");
+                throw new Exception("Expecting CFBundleVersion to be a version consisting of four parts 1.0.218.1231 [Major].[Minor].[Build].[Revision]");
             }
         
             /* if this blows up our build version is borked...make sure all version numbers are intergers like 1.0.218.1231 */
