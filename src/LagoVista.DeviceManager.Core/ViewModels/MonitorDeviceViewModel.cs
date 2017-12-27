@@ -126,6 +126,10 @@ namespace LagoVista.DeviceManager.Core.ViewModels
                         DispatcherServices.Invoke(() =>
                         {
                             DeviceMessages.Insert(0, archive);
+                            if(DeviceMessages.Count == 50)
+                            {
+                                DeviceMessages.RemoveAt(2);
+                            }
                         });
                         break;
                     case "LagoVista.IoT.DeviceManagement.Core.Models.Device":
@@ -201,7 +205,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
                             inputCommands.Insert(0, new InputCommand()
                             {
                                 Key = "N/A",
-                                Name = Resources.DeviceManagerResources.MonitorDevice_SelectOutputCommand
+                                Name = Resources.DeviceManagerResources.MonitorDevice_SelectInputCommand
                             });
                             InputCommands = inputCommands;
                             SelectedInputCommand = inputCommands[0];

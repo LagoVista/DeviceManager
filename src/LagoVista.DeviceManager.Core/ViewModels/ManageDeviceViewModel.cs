@@ -112,8 +112,14 @@ namespace LagoVista.DeviceManager.Core.ViewModels
 
         protected override void BuildForm(EditFormAdapter form)
         {
+            if(String.IsNullOrEmpty(Model.Name))
+            {
+                Model.Name = Model.DeviceId;
+            }
+
             View[nameof(Model.DeviceId).ToFieldKey()].IsUserEditable = LaunchArgs.LaunchType == LaunchTypes.Create;
 
+            form.AddViewCell(nameof(Model.Name));
             form.AddViewCell(nameof(Model.DeviceId));
             form.AddViewCell(nameof(Model.SerialNumber));
             form.AddViewCell(nameof(Model.DeviceType));

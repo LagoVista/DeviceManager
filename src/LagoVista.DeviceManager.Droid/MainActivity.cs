@@ -4,6 +4,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using LagoVista.Core.Models;
+using LagoVista.XPlat.Core.Services;
 
 namespace LagoVista.DeviceManager.Droid
 {
@@ -23,6 +24,7 @@ namespace LagoVista.DeviceManager.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            DeviceInfo.Register();
             var app = new App();
 
             var packageInfo = PackageManager.GetPackageInfo(PackageName, 0);

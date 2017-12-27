@@ -2,7 +2,7 @@
 using Foundation;
 using LagoVista.Core.Models;
 using UIKit;
-
+using LagoVista.XPlat.Core.Services;
 
 namespace LagoVista.DeviceManager.iOS
 {
@@ -24,6 +24,9 @@ namespace LagoVista.DeviceManager.iOS
             app.StatusBarHidden = false;
 
             global::Xamarin.Forms.Forms.Init();
+
+            DeviceInfo.Register();
+
             var formsApp = new App();
             Console.WriteLine("Created App");
 
