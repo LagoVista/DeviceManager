@@ -17,7 +17,6 @@ namespace LagoVista.DeviceManager.Core.ViewModels
             await NavigateAndCreateAsync<ProvisionDeviceViewModel>(LaunchArgs.ChildId);
         }
 
-
         protected override void ItemSelected(DeviceSummary model)
         {
             base.ItemSelected(model);

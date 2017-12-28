@@ -1172,6 +1172,8 @@ namespace LagoVista.DeviceManager.Droid
 			global::LagoVista.XPlat.Droid.Resource.Layout.select_dialog_multichoice_material = global::LagoVista.DeviceManager.Droid.Resource.Layout.select_dialog_multichoice_material;
 			global::LagoVista.XPlat.Droid.Resource.Layout.select_dialog_singlechoice_material = global::LagoVista.DeviceManager.Droid.Resource.Layout.select_dialog_singlechoice_material;
 			global::LagoVista.XPlat.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::LagoVista.DeviceManager.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::LagoVista.XPlat.Droid.Resource.String.ApplicationName = global::LagoVista.DeviceManager.Droid.Resource.String.ApplicationName;
+			global::LagoVista.XPlat.Droid.Resource.String.Hello = global::LagoVista.DeviceManager.Droid.Resource.String.Hello;
 			global::LagoVista.XPlat.Droid.Resource.String.abc_action_bar_home_description = global::LagoVista.DeviceManager.Droid.Resource.String.abc_action_bar_home_description;
 			global::LagoVista.XPlat.Droid.Resource.String.abc_action_bar_home_description_format = global::LagoVista.DeviceManager.Droid.Resource.String.abc_action_bar_home_description_format;
 			global::LagoVista.XPlat.Droid.Resource.String.abc_action_bar_home_subtitle_description_format = global::LagoVista.DeviceManager.Droid.Resource.String.abc_action_bar_home_subtitle_description_format;
@@ -5823,6 +5825,12 @@ namespace LagoVista.DeviceManager.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f090053
+			public const int ApplicationName = 2131296339;
+			
+			// aapt resource value: 0x7f090052
+			public const int Hello = 2131296338;
+			
 			// aapt resource value: 0x7f090016
 			public const int abc_action_bar_home_description = 2131296278;
 			
@@ -5916,8 +5924,8 @@ namespace LagoVista.DeviceManager.Droid
 			// aapt resource value: 0x7f090028
 			public const int abc_toolbar_collapse_description = 2131296296;
 			
-			// aapt resource value: 0x7f090052
-			public const int app_name = 2131296338;
+			// aapt resource value: 0x7f090054
+			public const int app_name = 2131296340;
 			
 			// aapt resource value: 0x7f090037
 			public const int appbar_scrolling_view_behavior = 2131296311;

@@ -32,7 +32,7 @@
                                     <ColumnDefinition Width="auto" />
                                 </Grid.ColumnDefinitions>
                                 <pge:Icon IconKey="fa-microchip"  Grid.Column="1" FontSize="24" VerticalOptions="Center" TextColor="{StaticResource NuvIoTContrast}"  />
-                                <Label Text="{Binding Name}" Grid.Column="3" FontSize="24" TextColor="{StaticResource NuvIoTDark}" VerticalOptions="Center" />
+                                <Label Text="{Binding DeviceName}" Grid.Column="3" FontSize="24" TextColor="{StaticResource NuvIoTDark}" VerticalOptions="Center" />
                                 <pge:Icon IconKey="fa-chevron-right" Grid.Column="4" FontSize="16" Margin="0,0,16,0" TextColor="{StaticResource NuvIoTDark}" VerticalOptions="Center"  />
                             </Grid>
                         </ViewCell>

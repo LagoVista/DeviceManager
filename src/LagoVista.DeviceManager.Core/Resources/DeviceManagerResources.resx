@@ -153,6 +153,9 @@
   <data name="MonitorDevice_Messages" xml:space="preserve">
     <value>Messages</value>
   </data>
+  <data name="MonitorDevice_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
   <data name="MonitorDevice_SelectInputCommand" xml:space="preserve">
     <value>-select input command-</value>
   </data>

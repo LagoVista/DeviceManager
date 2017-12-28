@@ -28,8 +28,6 @@ namespace LagoVista.DeviceManager.iOS
             DeviceInfo.Register();
 
             var formsApp = new App();
-            Console.WriteLine("Created App");
-
 
             var version = NSBundle.MainBundle.InfoDictionary[new NSString("CFBundleVersion")].ToString();
             Console.WriteLine($"NSLog Version {version}");

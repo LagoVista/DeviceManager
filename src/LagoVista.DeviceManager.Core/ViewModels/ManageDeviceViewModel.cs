@@ -25,7 +25,10 @@ namespace LagoVista.DeviceManager.Core.ViewModels
 
         public override Task<InvokeResult> SaveRecordAsync()
         {
-            throw new NotImplementedException();
+            return PerformNetworkOperation(() =>
+            {
+                return FormRestClient.UpdateAsync($"/api/device/{_deviceRepoId}", this.Model);
+            });
         }
 
         private  void ShowProperties()

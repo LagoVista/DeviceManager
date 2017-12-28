@@ -170,6 +170,15 @@ namespace LagoVista.DeviceManager.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string MonitorDevice_Name {
+            get {
+                return ResourceManager.GetString("MonitorDevice_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -select input command-.
         /// </summary>
         public static string MonitorDevice_SelectInputCommand {

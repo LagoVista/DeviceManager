@@ -36,20 +36,24 @@
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="33*" />
                             <ColumnDefinition Width="66*" />
                         </Grid.ColumnDefinitions>
 
-                        <Label Text="{trs:Translate MonitorDevice_DeviceId}" Grid.Column="0" Grid.Row="0" FontAttributes="Bold" TextColor="{StaticResource NuvIoTContrast}" FontSize="Small"  />
-                        <Label Text="{Binding Device.DeviceId}" Grid.Column="1" Grid.Row="0" FontSize="Small"  />
+                        <Label Text="{trs:Translate MonitorDevice_Name}" Grid.Column="0" Grid.Row="0" FontAttributes="Bold" TextColor="{StaticResource NuvIoTContrast}" FontSize="Small"  />
+                        <Label Text="{Binding Device.Name}" Grid.Column="1" Grid.Row="0" FontSize="Small"  />
 
-                        <Label Text="{trs:Translate MonitorDevice_Status}" Grid.Column="0" Grid.Row="1" FontAttributes="Bold" TextColor="{StaticResource NuvIoTContrast}" FontSize="Small"  />
-                        <Label Text="{Binding Device.Status.Text}" Grid.Column="1" Grid.Row="1" FontSize="Small"  />
+                        <Label Text="{trs:Translate MonitorDevice_DeviceId}" Grid.Column="0" Grid.Row="1" FontAttributes="Bold" TextColor="{StaticResource NuvIoTContrast}" FontSize="Small"  />
+                        <Label Text="{Binding Device.DeviceId}" Grid.Column="1" Grid.Row="1" FontSize="Small"  />
 
-                        <Label Text="{trs:Translate MonitorDevice_LastContact}" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" TextColor="{StaticResource NuvIoTContrast}" FontSize="Small"  />
-                        <Label Text="{Binding Device.LastContact, Converter={StaticResource DatePrinterConverter}}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" FontSize="Small"  />
+                        <Label Text="{trs:Translate MonitorDevice_Status}" Grid.Column="0" Grid.Row="2" FontAttributes="Bold" TextColor="{StaticResource NuvIoTContrast}" FontSize="Small"  />
+                        <Label Text="{Binding Device.Status.Text}" Grid.Column="1" Grid.Row="2" FontSize="Small"  />
+
+                        <Label Text="{trs:Translate MonitorDevice_LastContact}" Grid.Row="3" Grid.Column="0" FontAttributes="Bold" TextColor="{StaticResource NuvIoTContrast}" FontSize="Small"  />
+                        <Label Text="{Binding Device.LastContact, Converter={StaticResource DatePrinterConverter}}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" FontSize="Small"  />
                     </Grid>
 
                     <Label Margin="10,10,0,4" Text="{trs:Translate MonitorDevice_Attributes}" Grid.Row="2" FontAttributes="Bold" FontSize="Medium"  TextColor="{StaticResource NuvIoTDark}" />

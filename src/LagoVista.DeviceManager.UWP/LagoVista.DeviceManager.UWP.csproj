@@ -11,7 +11,7 @@
     <AssemblyName>LagoVista.DeviceManager.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
@@ -103,6 +103,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\appicon.png" />
     <Content Include="Assets\BadgeLogo.scale-100.png" />
     <Content Include="Assets\BadgeLogo.scale-125.png" />
     <Content Include="Assets\BadgeLogo.scale-150.png" />
@@ -182,6 +183,7 @@
     <Content Include="Assets\NuvIoT-128x128W.png" />
     <Content Include="Assets\NuvIoT-256x256W.png" />
     <Content Include="Assets\Settings_100px.png" />
+    <Content Include="Assets\slsys.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-125.png" />
     <Content Include="Assets\SmallTile.scale-150.png" />
@@ -242,17 +244,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LagoVista.Client.Core">
+      <Version>1.2.225-alpha1746</Version>
+    </PackageReference>
     <PackageReference Include="LagoVista.Core">
-      <Version>1.2.224-alpha1044</Version>
+      <Version>1.2.224-alpha1826</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core.Authentication">
-      <Version>1.2.224-alpha1044</Version>
+      <Version>1.2.224-alpha1826</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core.Networking">
-      <Version>1.2.224-alpha1044</Version>
+      <Version>1.2.224-alpha1826</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.XPlat">
-      <Version>1.2.224-alpha1803</Version>
+      <Version>1.2.225-alpha1746</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.Mobile.Analytics">
       <Version>0.17.1</Version>

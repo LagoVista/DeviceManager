@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Reflection;
+
 
 namespace LagoVista.DeviceManager.UWP
 {
@@ -21,7 +23,20 @@ namespace LagoVista.DeviceManager.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new LagoVista.DeviceManager.App());
+            var version = typeof(App).GetTypeInfo().Assembly.GetName().Version;
+
+            var versionInfo = new LagoVista.Core.Models.VersionInfo()
+            {
+                Major = version.Major,
+                Minor = version.Minor,
+                Revision = version.Revision,
+                Build = version.Build,
+            };
+
+            var app = new LagoVista.DeviceManager.App();
+            app.SetVersionInfo(versionInfo);
+            LoadApplication(app);
+
         }
     }
 }
