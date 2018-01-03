@@ -1,7 +1,7 @@
-﻿//#define ENV_LOCAL
-//#define ENV_DEV
-//#define ENV_STAGE
-#define ENV_MASTER
+//#define ENV_LOCALDEV
+//#define ENV_LOCALDEV
+//#define ENV_LOCALDEV
+#define ENV_LOCALDEV
 
 
 using LagoVista.Client.Core;
@@ -53,7 +53,7 @@ namespace LagoVista.DeviceManager
                 SSL = true,
                 RootUrl = "dev-api.nuviot.com",
             };
-#elif ENV_LOCAL
+#elif ENV_LOCALDEV
             var serverInfo = new ServerInfo()
             {
                 SSL = false,

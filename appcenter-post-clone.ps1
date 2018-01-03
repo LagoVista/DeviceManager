@@ -1,3 +1,12 @@
+param([string]$uwpappidentity, [string]$appcenter_appid, [string]$branch, [string]$certfile, [string]$certthumbprint)
+
+"$UWPAPPIDENTITY $APPCENTER_APPID $BRANCH $certfile $certthumbprint"
+
+#required input params
+# UWPAPPIDENTITY
+# APPCENTER_APPID
+# APPCENTER_BRANCH
+
 function Generate-VersionNumber() {
     $end = Get-Date
     $start = Get-Date "5/17/2017"
@@ -9,19 +18,25 @@ function Generate-VersionNumber() {
     $revisionNumber = New-TimeSpan -Start $start -End $end
     $minutes = New-TimeSpan -Start $today -End $end
 	
-	$buildNumber =  ("{0:00}" -f ([math]::Round($end.Month))) + ("{0:00}" -f ([math]::Round($end.Day)))
+	$buildNumber =  ($end-$start).Days
 	$revisionNumber = ("{0:00}" -f [math]::Round($minutes.Hours)) + ("{0:00}" -f ([math]::Round($minutes.Minutes)))
 
 	return "$buildNumber.$revisionNumber"
-
 }
 
 $scriptPath = (Split-Path $MyInvocation.MyCommand.Path);
-$scriptPath
+
+$coreappdir = "$scriptPath\src\LagoVista.DeviceManager"
+$uwpprojectdir = "$scriptPath\src\LagoVista.DeviceManager.UWP"
+$uwpprojectfile = "$uwpprojectdir\LagoVista.DeviceManager.UWP.csproj"
+$appmanifestFile = "$uwpprojectdir\Package.appxmanifest"
+$storeAssociationFile = "$uwpprojectdir\Package.StoreAssociation.xml"
+$uwpAppFile = "$uwpprojectdir\App.xaml.cs"
+$assemblyInfoFile = "$uwpprojectdir\Properties\AssemblyInfo.cs"
+$mainAppFile = "$coreappdir\App.xaml.cs"
 
 "Copy Environment Specific Icons"
-$env:APPCENTER_BRANCH
-Copy-Item -Path ".\BuildAssets\UWP\$env:APPCENTER_BRANCH\*"  -Destination ".\src\LagoVista.PlatformManager.UWP\Assets" -Force
+Copy-Item -Path ".\BuildAssets\UWP\$branch\*"  -Destination ".\src\LagoVista.PlatformManager.UWP\Assets" -Force
 
 $versionFile = "$scriptPath\version.txt"
 
@@ -30,44 +45,51 @@ $revisionNumber = Generate-VersionNumber
 $versionNumber = "$versionContent.$revisionNumber"
 "Done setting version: $versionNumber"
 
+# Set the Signing Key
+$content = New-Object XML
+$content.Load($uwpprojectfile);
+$nsm = New-Object Xml.XmlNamespaceManager($content.NameTable)
+$nsm.AddNamespace('ns', $content.DocumentElement.NamespaceURI)
+$content.SelectSingleNode('//ns:PackageCertificateKeyFile', $nsm).InnerText = $certfile
+$content.SelectSingleNode('//ns:PackageCertificateThumbprint', $nsm).InnerText = $certthumbprint
+$content.save($uwpprojectfile)
+"Set certfile: $certfile and certhumbprint: XXXXXXXXXXXXXXXXXX' in $appmanifestFile"
+
 # Set the App Identity in the app manifest
-$appmanifestFile = "$scriptPath\src\LagoVista.DeviceManager.UWP\Package.appxmanifest"
-$appmanifestFile
 [xml] $content = Get-Content  $appmanifestFile
-$content.Package.Identity.Name
-$content.Package.Identity.Name = $env:UWPAPPIDENTITY
+$content.Package.Identity.Name = $uwpappidentity
 $content.Package.Identity.Version = $versionNumber
 $content.save($appmanifestFile)
+"Set App Identity: $uwpappidentity in $appmanifestFile"
 
 # Set the App Identity in the Store Association File
-$storeAssociationFile = "$scriptPath\src\LagoVista.DeviceManager.UWP\Package.StoreAssociation.xml"
 [xml] $storeContent = (Get-Content  $storeAssociationFile) 
-$storeContent.StoreAssociation.ProductReservedInfo.MainPackageIdentityName
-$storeContent.StoreAssociation.ProductReservedInfo.MainPackageIdentityName = $env:UWPAPPIDENTITY
+$storeContent.StoreAssociation.ProductReservedInfo.MainPackageIdentityName = $uwpappidentity
 $storeContent.save($storeAssociationFile)
+"Set App Identity: $uwpappidentity in $storeAssociationFile"
 
 # Set the App Center Id for the current app.
-$uwpAppFile = "$scriptPath\src\LagoVista.DeviceManager.UWP\App.xaml.cs"
 [string] $uwpAppFileContent = (Get-Content $uwpAppFile) -join "`r`n"
 $regEx = "MOBILE_CENTER_KEY = \""[0-9a-f\-]+\"";"
-$uwpAppFileContent = $uwpAppFileContent -replace $regEx, "MOBILE_CENTER_KEY = ""$env:APPCENTER_APPID"";";
+$uwpAppFileContent = $uwpAppFileContent -replace $regEx, "MOBILE_CENTER_KEY = ""$appcenter_appid"";";
 $uwpAppFileContent | Set-Content $uwpAppFile
-"Set $env:APPCENTERID in UWP\App.xaml.cs"
+"Set App CenterId: $appcenter_appid in $uwpAppFile"
 
 # Set the Version Numbers in the AssemblyInfo.cs file.
-$assemblyInfoFile = "$scriptPath\src\LagoVista.DeviceManager.UWP\Properties\AssemblyInfo.cs"
 [string] $assemblyInfoContent = (Get-Content $assemblyInfoFile) -join "`r`n"
 $regEx = "assembly: AssemblyVersion\(\""[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\""\)"
 $assemblyInfoContent = $assemblyInfoContent -replace $regEx,  "assembly: AssemblyVersion(""$versionNumber"")"
 $regEx = "assembly: AssemblyFileVersion\(\""[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\""\)"
 $assemblyInfoContent = $assemblyInfoContent -replace $regEx,  "assembly: AssemblyFileVersion(""$versionNumber"")"
 $assemblyInfoContent | Set-Content  $assemblyInfoFile 
-"Set version $versionNumber in AssemblyInfo.cs"
+"Set version $versionNumber in $assemblyInfoFile"
 
-$mainAppFile = "$scriptPath\src\LagoVista.DeviceManager.UWP\App.xaml.cs"
+# Set the server environment file in the Xamarin Forms App File
 [string] $mainAppContent = (Get-Content $mainAppFile) -join "`r`n"
-$envRegEx = "#define ENV_[A-Z]+"
-$ucaseEnvironment = $env:APPCENTER_BRANCH.ToUpper();
+$envRegEx = "#define ENV_[A-Z]*"
+$ucaseEnvironment = $branch.ToUpper();
 $mainAppContent = $mainAppContent -replace $envRegEx, "#define ENV_$ucaseEnvironment";
 $mainAppContent | Set-Content $mainAppFile
-"Set $env:APPCENTER_BRANCH in LagoVista.DeviceManager.UWP\App.xaml.cs"
+"Set $ucaseEnvironment in $mainAppFile"
+"------------------------------------------------"
+""
