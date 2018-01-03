@@ -48,7 +48,7 @@ $assemblyInfoFile = "$uwpprojectdir\Properties\AssemblyInfo.cs"
 $mainAppFile = "$coreappdir\App.xaml.cs"
 
 "Copy Environment Specific Icons"
-Copy-Item -Path ".\BuildAssets\UWP\$branch\*"  -Destination ".\src\LagoVista.PlatformManager.UWP\Assets" -Force
+Copy-Item -Path ".\BuildAssets\UWP\$branch\*"  -Destination "$uwpprojectdir" -Force
 
 $versionFile = "$scriptPath\version.txt"
 
