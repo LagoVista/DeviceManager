@@ -62,10 +62,10 @@ $content = New-Object XML
 $content.Load($uwpprojectfile);
 $nsm = New-Object Xml.XmlNamespaceManager($content.NameTable)
 $nsm.AddNamespace('ns', $content.DocumentElement.NamespaceURI)
-$content.SelectSingleNode('//ns:PackageCertificateKeyFile', $nsm).InnerText = $pfxpath
-$content.SelectSingleNode('//ns:PackageCertificateThumbprint', $nsm).InnerText = $certthumbprint
-$content.save($uwpprojectfile)
-"Set certfile: $certfile and certhumbprint: XXXXXXXXXXXXXXXXXX' in $appmanifestFile"
+#$content.SelectSingleNode('//ns:PackageCertificateKeyFile', $nsm).InnerText = $pfxpath
+#$content.SelectSingleNode('//ns:PackageCertificateThumbprint', $nsm).InnerText = $certthumbprint
+#$content.save($uwpprojectfile)
+#"Set certfile: $certfile and certhumbprint: XXXXXXXXXXXXXXXXXX' in $appmanifestFile"
 
 # Set the App Identity in the app manifest
 [xml] $content = Get-Content  $appmanifestFile
