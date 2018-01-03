@@ -2,6 +2,8 @@ param([string]$uwpappidentity, [string]$appcenter_appid, [string]$branch, [strin
 
 "$UWPAPPIDENTITY $APPCENTER_APPID $BRANCH $certfile $certthumbprint"
 
+#Note: There is a build task: Download Secure File, it will download the file to WORKFOLDER\_temp and the updated project file will pick it up from there.
+
 #required input params
 # UWPAPPIDENTITY
 # APPCENTER_APPID
@@ -50,7 +52,7 @@ $content = New-Object XML
 $content.Load($uwpprojectfile);
 $nsm = New-Object Xml.XmlNamespaceManager($content.NameTable)
 $nsm.AddNamespace('ns', $content.DocumentElement.NamespaceURI)
-$content.SelectSingleNode('//ns:PackageCertificateKeyFile', $nsm).InnerText = $certfile
+$content.SelectSingleNode('//ns:PackageCertificateKeyFile', $nsm).InnerText = "$env:AGENT_WORKFOLDER\_temp\$certfile"
 $content.SelectSingleNode('//ns:PackageCertificateThumbprint', $nsm).InnerText = $certthumbprint
 $content.save($uwpprojectfile)
 "Set certfile: $certfile and certhumbprint: XXXXXXXXXXXXXXXXXX' in $appmanifestFile"
