@@ -1,4 +1,4 @@
-param([string]$uwpappidentity, [string]$appcenter_appid, [string]$branch, [string]$certfile, [string]$certthumbprint)
+param([string]$uwpappidentity, [string]$appcenter_appid, [string]$branch, [string]$certfile, [string]$certthumbprint, [string]$certPwd)
 
 "$UWPAPPIDENTITY $APPCENTER_APPID $BRANCH $certfile $certthumbprint"
 
@@ -26,6 +26,16 @@ function Generate-VersionNumber() {
 	return "$buildNumber.$revisionNumber"
 }
 
+$pfxpath = "$env:AGENT_WORKFOLDER\_temp\$certfile"
+
+Add-Type -AssemblyName System.Security
+$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+$cert.Import($pfxpath, $certPwd, [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]"PersistKeySet")
+$store = new-object system.security.cryptography.X509Certificates.X509Store -argumentlist "MY", CurrentUser
+$store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]"ReadWrite")
+$store.Add($cert)
+$store.Close()
+
 $scriptPath = (Split-Path $MyInvocation.MyCommand.Path);
 
 $coreappdir = "$scriptPath\src\LagoVista.DeviceManager"
@@ -52,7 +62,7 @@ $content = New-Object XML
 $content.Load($uwpprojectfile);
 $nsm = New-Object Xml.XmlNamespaceManager($content.NameTable)
 $nsm.AddNamespace('ns', $content.DocumentElement.NamespaceURI)
-$content.SelectSingleNode('//ns:PackageCertificateKeyFile', $nsm).InnerText = "$env:AGENT_WORKFOLDER\_temp\$certfile"
+$content.SelectSingleNode('//ns:PackageCertificateKeyFile', $nsm).InnerText = $pfxpath
 $content.SelectSingleNode('//ns:PackageCertificateThumbprint', $nsm).InnerText = $certthumbprint
 $content.save($uwpprojectfile)
 "Set certfile: $certfile and certhumbprint: XXXXXXXXXXXXXXXXXX' in $appmanifestFile"
