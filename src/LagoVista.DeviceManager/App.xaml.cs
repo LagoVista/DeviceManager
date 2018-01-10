@@ -1,7 +1,7 @@
 //#define ENV_LOCALDEV
 //#define ENV_LOCALDEV
 //#define ENV_LOCALDEV
-#define ENV_LOCALDEV
+#define ENV_MASTER
 
 
 using LagoVista.Client.Core;

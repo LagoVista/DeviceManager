@@ -4,10 +4,12 @@ using LagoVista.Client.Core.ViewModels.Auth;
 using LagoVista.Client.Core.ViewModels.Orgs;
 using LagoVista.Core.Commanding;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using LagoVista.IoT.DeviceManagement.Core.Models;
 using LagoVista.Client.Core.ViewModels.Other;
+using System.Threading.Tasks;
 
 namespace LagoVista.DeviceManager.Core.ViewModels
 {
@@ -48,7 +50,36 @@ namespace LagoVista.DeviceManager.Core.ViewModels
                     FontIconKey = "fa-sign-out"
                 }
             };
+
+            ShowIoTAppStudioCommand = new RelayCommand(() => NetworkService.OpenURI(new Uri("https://www.IoTAppStudio.com")));
         }
+
+        private bool _hasRepos;
+        public bool HasRepos
+        {
+            get { return _hasRepos; }
+            set { Set(ref _hasRepos, value); }
+        }
+
+        private bool _emptyRepos;
+        public bool EmptyRepos
+        {
+            get { return _emptyRepos; }
+            set { Set(ref _emptyRepos, value); }
+        }
+
+        public async override Task InitAsync()
+        {
+            await base.InitAsync();
+
+            if (ListItems != null)
+            {
+                HasRepos = ListItems.Any();
+                EmptyRepos = !HasRepos;
+            }
+        }
+
+        public RelayCommand ShowIoTAppStudioCommand { get; private set; }
 
         protected override async void ItemSelected(DeviceRepositorySummary model)
         {
