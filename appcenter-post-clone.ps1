@@ -55,7 +55,6 @@ $versionFile = "$scriptPath\version.txt"
 
 [string] $versionContent = Get-Content $versionFile;
 $revisionNumber = Generate-VersionNumber
-$packageRevisionNumber =  Generate-PackageRevisionNumber
 $versionNumber = "$versionContent.$revisionNumber"
 $packageVersionNumber = "$versionContent.0"
 "Done setting version: $versionNumber"
