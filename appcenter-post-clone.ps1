@@ -21,7 +21,7 @@ function Generate-VersionNumber() {
     $minutes = New-TimeSpan -Start $today -End $end
 	
 	$buildNumber =  ($end-$start).Days
-	$revisionNumber = ("{0:00}" -f [math]::Round($minutes.Hours)) + ("{0:00}" -f ([math]::Round($minutes.Minutes)))
+	$revisionNumber = ("{0}" -f [math]::Round($minutes.Hours)) + ("{0:00}" -f ([math]::Round($minutes.Minutes)))
 
 	return "$buildNumber.$revisionNumber"
 }
