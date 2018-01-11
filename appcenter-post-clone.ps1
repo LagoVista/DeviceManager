@@ -26,6 +26,7 @@ function Generate-VersionNumber() {
 	return "$buildNumber.$revisionNumber"
 }
 
+
 $pfxpath = "$env:AGENT_WORKFOLDER\_temp\$certfile"
 
 Add-Type -AssemblyName System.Security
@@ -54,7 +55,9 @@ $versionFile = "$scriptPath\version.txt"
 
 [string] $versionContent = Get-Content $versionFile;
 $revisionNumber = Generate-VersionNumber
+$packageRevisionNumber =  Generate-PackageRevisionNumber
 $versionNumber = "$versionContent.$revisionNumber"
+$packageVersionNumber = "$versionContent.0"
 "Done setting version: $versionNumber"
 
 # Set the Signing Key
@@ -62,17 +65,17 @@ $content = New-Object XML
 $content.Load($uwpprojectfile);
 $nsm = New-Object Xml.XmlNamespaceManager($content.NameTable)
 $nsm.AddNamespace('ns', $content.DocumentElement.NamespaceURI)
-#$content.SelectSingleNode('//ns:PackageCertificateKeyFile', $nsm).InnerText = $pfxpath
-#$content.SelectSingleNode('//ns:PackageCertificateThumbprint', $nsm).InnerText = $certthumbprint
-#$content.save($uwpprojectfile)
-#"Set certfile: $certfile and certhumbprint: XXXXXXXXXXXXXXXXXX' in $appmanifestFile"
+$content.SelectSingleNode('//ns:PackageCertificateKeyFile', $nsm).InnerText = $pfxpath
+$content.SelectSingleNode('//ns:PackageCertificateThumbprint', $nsm).InnerText = $certthumbprint
+$content.save($uwpprojectfile)
+"Set certfile: $certfile and certhumbprint: XXXXXXXXXXXXXXXXXX' in $appmanifestFile"
 
 # Set the App Identity in the app manifest
 [xml] $content = Get-Content  $appmanifestFile
 $content.Package.Identity.Name = $uwpappidentity
-$content.Package.Identity.Version = $versionNumber
+$content.Package.Identity.Version = $packageVersionNumber
 $content.save($appmanifestFile)
-"Set App Identity: $uwpappidentity in $appmanifestFile"
+"Set App Identity: $uwpappidentity and package version $packageVersionNumber in $appmanifestFile"
 
 # Set the App Identity in the Store Association File
 [xml] $storeContent = (Get-Content  $storeAssociationFile) 
