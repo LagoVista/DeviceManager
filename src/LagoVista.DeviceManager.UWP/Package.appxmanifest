@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="SoftwareLogisticsLLC.IoTDeviceManager-LocalDev" Publisher="CN=610EF21F-3A3C-4783-B4BF-B7C267BC0CA0" Version="1.1.0.1146" />
-  <mp:PhoneIdentity PhoneProductId="cb705529-0e62-4424-a4c8-92338f0e8bc6" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="SoftwareLogisticsLLC.IoTDeviceManager" Publisher="CN=610EF21F-3A3C-4783-B4BF-B7C267BC0CA0" Version="1.1.0.1146" />
+  <mp:PhoneIdentity PhoneProductId="ccf24239-e695-48b0-a836-cec531318716" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>IoT Device Manager</DisplayName>
     <PublisherDisplayName>Software Logistics LLC</PublisherDisplayName>
