@@ -29,6 +29,8 @@ function Generate-VersionNumber() {
 
 $pfxpath = "$env:AGENT_WORKFOLDER\_temp\$certfile"
 
+"Starting Script Update Process"
+
 "Importing cert $pfxpath"
 
 Add-Type -AssemblyName System.Security
@@ -58,7 +60,7 @@ $versionFile = "$scriptPath\version.txt"
 [string] $versionContent = Get-Content $versionFile;
 $revisionNumber = Generate-VersionNumber
 $versionNumber = "$versionContent.$revisionNumber"
-$packageVersionNumber = "$versionContent.0"
+$packageVersionNumber = "$versionContent.0.0"
 "Done setting version: $versionNumber"
 
 # Set the Signing Key
