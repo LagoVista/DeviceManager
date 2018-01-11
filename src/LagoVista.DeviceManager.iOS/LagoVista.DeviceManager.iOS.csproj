@@ -249,6 +249,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\AppStoreIcon.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
