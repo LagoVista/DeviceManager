@@ -45,7 +45,7 @@ namespace LagoVista.DeviceManager
             var serverInfo = new ServerInfo()
             {
                 SSL = true,
-                RootUrl = "stage-api.nuviot.com",
+                RootUrl = "api.nuviot.com",
             };
 #elif ENV_DEV
             var serverInfo = new ServerInfo()
