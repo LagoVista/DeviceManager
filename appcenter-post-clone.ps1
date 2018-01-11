@@ -29,6 +29,8 @@ function Generate-VersionNumber() {
 
 $pfxpath = "$env:AGENT_WORKFOLDER\_temp\$certfile"
 
+"Importing cert $pfxpath"
+
 Add-Type -AssemblyName System.Security
 $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
 $cert.Import($pfxpath, $certPwd, [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]"PersistKeySet")
