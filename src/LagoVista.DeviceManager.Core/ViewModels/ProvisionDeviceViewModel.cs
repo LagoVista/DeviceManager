@@ -138,6 +138,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
             Model.PrimaryAccessKey = Convert.ToBase64String(keyOne);
             Model.SecondaryAccessKey = Convert.ToBase64String(keyTwo);
 
+            form.AddViewCell(nameof(Model.Name));
             form.AddViewCell(nameof(Model.DeviceId));
             form.AddViewCell(nameof(Model.SerialNumber));
             form.AddViewCell(nameof(Model.DeviceType));

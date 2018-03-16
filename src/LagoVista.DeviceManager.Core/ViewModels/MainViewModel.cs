@@ -74,7 +74,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
 
             if (ListItems != null)
             {
-                HasRepos = !ListItems.Any();
+                HasRepos = ListItems.Any();
                 EmptyRepos = !HasRepos;
             }
         }
