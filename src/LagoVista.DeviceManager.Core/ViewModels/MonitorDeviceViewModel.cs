@@ -46,7 +46,12 @@ namespace LagoVista.DeviceManager.Core.ViewModels
 
             await PerformNetworkOperation(async () =>
             {
-                var response = await RestClient.GetAsync<DetailResponse<Device>>($"/api/device/{_deviceRepoId}/{_deviceId}/metadata");
+                var path = $"/api/device/{_deviceRepoId}/{_deviceId}/metadata";
+
+                var response1 = await RestClient.GetAsync(path);
+                Debug.WriteLine(response1.Content);
+
+                var response = await RestClient.GetAsync<DetailResponse<Device>>(path);
                 if (response.Successful)
                 {
                     Device = response.Result.Model;
