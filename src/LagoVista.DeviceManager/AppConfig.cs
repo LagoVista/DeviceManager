@@ -49,7 +49,7 @@ namespace LagoVista.DeviceManager
 
         public string CompanySiteLink => "https://support.nuviot.com/help.html#/information/company";
 
-        public string AppDescription => "IoT Device Manager is a free app provided by Software Logistics, LLC that will all you to manage and monitor devices from device repositores created with IoT App Studio.";
+        public string AppDescription => "IoT Device Manager is a free application provided by Software Logistics, LLC that will allow you to manage and monitor devices from device repositores created with IoT App Studio.";
 
         public string TermsAndConditionsLink => "https://app.termly.io/document/terms-of-use-for-saas/90eaf71a-610a-435e-95b1-c94b808f8aca";
 

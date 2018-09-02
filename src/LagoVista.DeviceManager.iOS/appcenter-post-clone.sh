@@ -34,11 +34,11 @@ fullVersion=$version.$buildNumber.$revision
 
 echo Setting Version
 echo $fullVersion
-cat $APPCENTER_SOURCE_DIRECTORY/src/$iOSProjectName/Info.plist
-
 plutil -replace CFBundleShortVersionString -string $fullVersion $APPCENTER_SOURCE_DIRECTORY/src/$iOSProjectName/Info.plist
 plutil -replace CFBundleVersion -string $fullVersion $APPCENTER_SOURCE_DIRECTORY/src/$iOSProjectName/Info.plist
 plutil -replace CFBundleIdentifier -string $APPBUNDLEID $APPCENTER_SOURCE_DIRECTORY/src/$iOSProjectName/Info.plist
+
+cat $APPCENTER_SOURCE_DIRECTORY/src/$iOSProjectName/Info.plist
 
 # within the script, the branch name identifies the server to be used, however it must always be upper case to match conditional compile in code
 val=$(echo "$APPCENTER_BRANCH" | tr '[:lower:]' '[:upper:]' )
