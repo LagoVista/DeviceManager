@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <pge:LagoVistaContentPage  
     xmlns:pge="clr-namespace:LagoVista.XPlat.Core;assembly=LagoVista.XPlat.Core"
     xmlns="http://xamarin.com/schemas/2014/forms"
@@ -64,7 +64,7 @@
                     <Label Margin="10,10,0,4" Text="{trs:Translate MonitorDevice_StateMachines}" Grid.Row="4" FontAttributes="Bold" FontSize="Medium"  TextColor="{StaticResource NuvIoTDark}" />
                     <BoxView HeightRequest="1" VerticalOptions="End" Color="Silver" Grid.Row="4" />
 
-                    <pge:KVPRepeater LabelColor="{StaticResource NuvIoTContrast}" ItemSource="{Binding StateMachines, Mode=TwoWay}" Grid.Row="5" Padding="10"  />
+                    <pge:KVPRepeater IsVisible="{Binding HasStateMachines}" LabelColor="{StaticResource NuvIoTContrast}" ItemSource="{Binding StateMachines, Mode=TwoWay}" Grid.Row="5" Padding="10"  />
 
                     <Label Margin="10,10,0,4" Text="{trs:Translate MonitorDevice_Messages}" Grid.Row="6" FontAttributes="Bold" FontSize="Medium" TextColor="{StaticResource NuvIoTDark}" />
                     <BoxView HeightRequest="1" VerticalOptions="End" Color="Silver" Grid.Row="6" />

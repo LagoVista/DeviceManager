@@ -223,6 +223,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
                 }
                 
                 StateMachines = stateMachines;
+                HasStateMachines = StateMachines.Any();
                 DeviceAttributes = attrs;
                 Set(ref _device, value);
             }
@@ -315,6 +316,13 @@ namespace LagoVista.DeviceManager.Core.ViewModels
         {
             get { return _hasInputCommands; }
             set { Set(ref _hasInputCommands, value); }
+        }
+
+        private bool _hasStateMachines = false;
+        public bool HasStateMachines
+        {
+            get { return _hasStateMachines; }
+            set { Set(ref _hasStateMachines, value); }
         }
 
         private bool _inputCommandVisible = false;
