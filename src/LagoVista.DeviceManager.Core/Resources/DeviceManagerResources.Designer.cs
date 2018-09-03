@@ -10,7 +10,6 @@
 
 namespace LagoVista.DeviceManager.Core.Resources {
     using System;
-    using System.Reflection;
     
     
     /// <summary>
@@ -40,7 +39,7 @@ namespace LagoVista.DeviceManager.Core.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LagoVista.DeviceManager.Core.Resources.DeviceManagerResources", typeof(DeviceManagerResources).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LagoVista.DeviceManager.Core.Resources.DeviceManagerResources", typeof(DeviceManagerResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -94,6 +93,24 @@ namespace LagoVista.DeviceManager.Core.Resources {
         public static string DeviceExplorer_SearchWatermark {
             get {
                 return ResourceManager.GetString("DeviceExplorer_SearchWatermark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Device Type Filter.
+        /// </summary>
+        public static string DeviceExplorer_SelectDeviceType {
+            get {
+                return ResourceManager.GetString("DeviceExplorer_SelectDeviceType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -device type-.
+        /// </summary>
+        public static string DeviceExplorer_SelectDeviceType_Watermark {
+            get {
+                return ResourceManager.GetString("DeviceExplorer_SelectDeviceType_Watermark", resourceCulture);
             }
         }
         

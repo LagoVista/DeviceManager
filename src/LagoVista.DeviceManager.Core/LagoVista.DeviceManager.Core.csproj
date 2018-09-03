@@ -5,6 +5,7 @@
     <DebugType>PdbOnly</DebugType>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="LagoVista.Client.Devices" Version="1.2.472-alpha1748" />
     <PackageReference Include="Microsoft.AppCenter" Version="1.9.0" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="1.9.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.9.0" />

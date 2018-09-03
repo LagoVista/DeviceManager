@@ -21,6 +21,7 @@ using System.Text;
 
 using Xamarin.Forms;
 using LagoVista.Core.Models;
+using LagoVista.Client.Devices;
 
 namespace LagoVista.DeviceManager
 {
@@ -88,6 +89,7 @@ namespace LagoVista.DeviceManager
 
             navigation.Start<SplashViewModel>();
 
+            SLWIOC.Register<IDeviceManagementClient, DeviceManagementClient>();
             SLWIOC.RegisterSingleton<IViewModelNavigation>(navigation);
         }
 
