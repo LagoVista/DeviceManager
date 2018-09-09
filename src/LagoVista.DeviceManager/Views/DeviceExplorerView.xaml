@@ -19,11 +19,12 @@
             </Grid.RowDefinitions>
 
             <SearchBar  SearchCommand="{Binding SeachNowCommand}" Placeholder="{trs:Translate DeviceExplorer_SearchWatermark}" />
-            <StackLayout Grid.Row="1">
-                <Label Text="{Binding DeviceExplorer_SelectDeviceType}" />
-                <pge:HyperLinkLabel NavigateCommand="{Binding SelectDeviceTypeCommand}" Text="{trs:Translate DeviceType}" Grid.Row="1" />
-                <BoxView HeightRequest="1" Color="Red" />
+            
+            <StackLayout Grid.Row="1" Orientation="Horizontal" Margin="10">
+                <Label Text="{trs:Translate DeviceExplorer_SelectDeviceType}" />
+                <pge:HyperLinkLabel NavigateCommand="{Binding SelectDeviceTypeCommand}" Text="{Binding DeviceType}" HorizontalOptions="End"/>
             </StackLayout>
+            
             <ListView ItemsSource="{Binding ListItems}" RowHeight="64" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Row="2" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
