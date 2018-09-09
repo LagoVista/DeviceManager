@@ -19,7 +19,7 @@ namespace LagoVista.DeviceManager.UWP
     /// </summary>
     sealed partial class App : Application
     {
-        public const string MOBILE_CENTER_KEY = "";
+        public const string MOBILE_CENTER_KEY = "5b462d50-7eff-4713-a0b6-f168149e6148";
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
