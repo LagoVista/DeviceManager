@@ -91,6 +91,9 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LagoVista.Client.Devices">
+      <Version>1.2.472-alpha1748</Version>
+    </PackageReference>
     <PackageReference Include="LagoVista.Core">
       <Version>2.1.439-beta1607</Version>
     </PackageReference>
@@ -98,6 +101,9 @@
       <Version>2.1.439-beta1607</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core.Networking">
+      <Version>2.1.439-beta1607</Version>
+    </PackageReference>
+    <PackageReference Include="LagoVista.IoT.Deployment.Models">
       <Version>2.1.439-beta1607</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models">
