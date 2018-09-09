@@ -129,6 +129,12 @@
   <data name="DeviceExplorer_SearchWatermark" xml:space="preserve">
     <value>search by device id</value>
   </data>
+  <data name="DeviceExplorer_SelectDeviceType" xml:space="preserve">
+    <value>Device Type Filter</value>
+  </data>
+  <data name="DeviceExplorer_SelectDeviceType_Watermark" xml:space="preserve">
+    <value>-device type-</value>
+  </data>
   <data name="DeviceExplorer_Title" xml:space="preserve">
     <value>Device Explorer</value>
   </data>

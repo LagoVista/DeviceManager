@@ -1,6 +1,6 @@
 //#define ENV_LOCALDEV
 //#define ENV_LOCALDEV
-//#define ENV_LOCALDEV
+//#define ENV_DEV
 #define ENV_MASTER
 
 
@@ -21,6 +21,7 @@ using System.Text;
 
 using Xamarin.Forms;
 using LagoVista.Core.Models;
+using LagoVista.Client.Devices;
 
 namespace LagoVista.DeviceManager
 {
@@ -75,7 +76,7 @@ namespace LagoVista.DeviceManager
 
             var navigation = new ViewModelNavigation(this);
             LagoVista.XPlat.Core.Startup.Init(this, navigation);
-            LagoVista.Client.Core.Startup.Init(serverInfo);
+            LagoVista.Client.Core.Startup.Init(serverInfo, new AppStyle());
 
             navigation.Add<MainViewModel, Views.MainView>();
             navigation.Add<DeviceExplorerViewModel, Views.DeviceExplorerView>();
@@ -88,6 +89,7 @@ namespace LagoVista.DeviceManager
 
             navigation.Start<SplashViewModel>();
 
+            SLWIOC.Register<IDeviceManagementClient, DeviceManagementClient>();
             SLWIOC.RegisterSingleton<IViewModelNavigation>(navigation);
         }
 

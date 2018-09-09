@@ -46,7 +46,12 @@ namespace LagoVista.DeviceManager.Core.ViewModels
 
             await PerformNetworkOperation(async () =>
             {
-                var response = await RestClient.GetAsync<DetailResponse<Device>>($"/api/device/{_deviceRepoId}/{_deviceId}/metadata");
+                var path = $"/api/device/{_deviceRepoId}/{_deviceId}/metadata";
+
+                var response1 = await RestClient.GetAsync(path);
+                Debug.WriteLine(response1.Content);
+
+                var response = await RestClient.GetAsync<DetailResponse<Device>>(path);
                 if (response.Successful)
                 {
                     Device = response.Result.Model;
@@ -218,6 +223,8 @@ namespace LagoVista.DeviceManager.Core.ViewModels
                 }
                 
                 StateMachines = stateMachines;
+                HasStateMachines = StateMachines.Any();
+                HasAttributes = attrs.Any();
                 DeviceAttributes = attrs;
                 Set(ref _device, value);
             }
@@ -310,6 +317,20 @@ namespace LagoVista.DeviceManager.Core.ViewModels
         {
             get { return _hasInputCommands; }
             set { Set(ref _hasInputCommands, value); }
+        }
+
+        private bool _hasStateMachines = false;
+        public bool HasStateMachines
+        {
+            get { return _hasStateMachines; }
+            set { Set(ref _hasStateMachines, value); }
+        }
+
+        private bool _hasAttributes = false;
+        public bool HasAttributes
+        {
+            get { return _hasAttributes; }
+            set { Set(ref _hasAttributes, value); }
         }
 
         private bool _inputCommandVisible = false;

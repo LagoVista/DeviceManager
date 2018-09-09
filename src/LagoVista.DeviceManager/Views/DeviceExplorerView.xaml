@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <pge:LagoVistaContentPage     
     xmlns:pge="clr-namespace:LagoVista.XPlat.Core;assembly=LagoVista.XPlat.Core"
     xmlns="http://xamarin.com/schemas/2014/forms"
@@ -14,26 +14,32 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <!--<SearchBar  SearchCommand="{Binding SearchNow}" Placeholder="{trs:Translate DeviceExplorer_SearchWatermark}" />-->
-
-            <ListView ItemsSource="{Binding ListItems}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" RowHeight="40" Grid.Row="1" >
+            <SearchBar  SearchCommand="{Binding SeachNowCommand}" Placeholder="{trs:Translate DeviceExplorer_SearchWatermark}" />
+            
+            <StackLayout Grid.Row="1" Orientation="Horizontal" Margin="10">
+                <Label Text="{trs:Translate DeviceExplorer_SelectDeviceType}" />
+                <pge:HyperLinkLabel NavigateCommand="{Binding SelectDeviceTypeCommand}" Text="{Binding DeviceType}" HorizontalOptions="End"/>
+            </StackLayout>
+            
+            <ListView ItemsSource="{Binding ListItems}" RowHeight="64" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Row="2" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid HeightRequest="64" Padding="0,16,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="32" />
+                                </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="16" />
+                                    <ColumnDefinition Width="8" />
                                     <ColumnDefinition Width="auto" />
-                                    <ColumnDefinition Width="16" />
                                     <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="auto" />
                                 </Grid.ColumnDefinitions>
                                 <pge:Icon IconKey="fa-microchip"  Grid.Column="1" FontSize="24" VerticalOptions="Center" TextColor="{StaticResource NuvIoTContrast}"  />
-                                <Label Text="{Binding DeviceName}" Grid.Column="3" FontSize="24" TextColor="{StaticResource NuvIoTDark}" VerticalOptions="Center" />
-                                <pge:Icon IconKey="fa-chevron-right" Grid.Column="4" FontSize="16" Margin="0,0,16,0" TextColor="{StaticResource NuvIoTDark}" VerticalOptions="Center"  />
+                                <Label Text="{Binding DeviceName}" Margin="8,0,0,0"  Grid.Column="2" FontSize="24" TextColor="{StaticResource NuvIoTDark}" VerticalOptions="Center" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
