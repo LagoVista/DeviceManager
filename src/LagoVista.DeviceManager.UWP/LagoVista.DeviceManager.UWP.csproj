@@ -266,7 +266,13 @@
     <PackageReference Include="LagoVista.IoT.Deployment.Models">
       <Version>2.1.439-beta1607</Version>
     </PackageReference>
+    <PackageReference Include="LagoVista.IoT.DeviceMessaging.Models">
+      <Version>2.1.439-beta1607</Version>
+    </PackageReference>
     <PackageReference Include="LagoVista.IoT.Logging">
+      <Version>2.1.439-beta1607</Version>
+    </PackageReference>
+    <PackageReference Include="LagoVista.IoT.Pipeline.Models">
       <Version>2.1.439-beta1607</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.XPlat">
