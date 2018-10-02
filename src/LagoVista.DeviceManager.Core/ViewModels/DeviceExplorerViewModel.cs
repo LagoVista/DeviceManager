@@ -18,7 +18,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
             AddNewDeviceCommand = new RelayCommand(AddNewDevice);
             SeachNowCommand = new RelayCommand(SearchNow);
             SelectDeviceTypeCommand = new RelayCommand(SelectDeviceType);
-          
+                      
             _client = client;
         }
 
