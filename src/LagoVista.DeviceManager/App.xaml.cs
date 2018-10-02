@@ -83,6 +83,7 @@ namespace LagoVista.DeviceManager
             navigation.Add<ProvisionDeviceViewModel, Views.ProvisionDeviceView>();
             navigation.Add<DeviceTypePickerViewModel, Views.DeviceTypePickerView>();
             navigation.Add<MonitorDeviceViewModel, Views.MonitorDeviceView>();
+            navigation.Add<DeviceMapViewModel, Views.DeviceMapView>();
             navigation.Add<ManageDeviceViewModel, Views.ManageDeviceView>();
 
             navigation.Add<SplashViewModel, Views.SplashView>();

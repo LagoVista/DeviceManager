@@ -18,6 +18,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		appcenter-post-clone.sh = appcenter-post-clone.sh
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{6271E13B-01C1-41A5-AA4D-97BF34B418EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{00DE7587-ED71-4B29-A36A-ED1476FB2FE4}"
+	ProjectSection(SolutionItems) = preProject
+		appcenter-post-clone.sh = appcenter-post-clone.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -387,6 +394,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13BC3985-C830-4176-A1BB-E3253E503B45} = {6271E13B-01C1-41A5-AA4D-97BF34B418EF}
+		{A96D4F0F-25D9-4BC8-9EA4-D786D7DF854F} = {00DE7587-ED71-4B29-A36A-ED1476FB2FE4}
+		{B42060CA-45D6-4524-BEEB-C08267FF0154} = {6271E13B-01C1-41A5-AA4D-97BF34B418EF}
+		{43EFDC19-773F-49DC-BE4D-EC4069EC0C3C} = {00DE7587-ED71-4B29-A36A-ED1476FB2FE4}
+		{E90DEDAC-C212-4872-9A2E-7A57C8701940} = {00DE7587-ED71-4B29-A36A-ED1476FB2FE4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D3E87934-CED8-40F9-AA4A-1EC21D649967}

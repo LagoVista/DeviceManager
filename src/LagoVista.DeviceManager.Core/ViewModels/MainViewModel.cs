@@ -10,6 +10,7 @@ using System.Text;
 using LagoVista.IoT.DeviceManagement.Core.Models;
 using LagoVista.Client.Core.ViewModels.Other;
 using System.Threading.Tasks;
+using LagoVista.DeviceManager.Core.Resources;
 
 namespace LagoVista.DeviceManager.Core.ViewModels
 {
@@ -19,6 +20,12 @@ namespace LagoVista.DeviceManager.Core.ViewModels
         {
             MenuItems = new List<MenuItem>()
             {
+                 new MenuItem()
+                {
+                    Command = new RelayCommand(() => ViewModelNavigation.NavigateAsync<DeviceMapViewModel>(this)),
+                    Name = DeviceManagerResources.MainVIew_Menu_MapView,
+                    FontIconKey = "fa-users"
+                },
                 new MenuItem()
                 {
                     Command = new RelayCommand(() => ViewModelNavigation.NavigateAsync<UserOrgsViewModel>(this)),

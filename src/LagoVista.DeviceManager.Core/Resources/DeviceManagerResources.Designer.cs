@@ -133,6 +133,15 @@ namespace LagoVista.DeviceManager.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Map View.
+        /// </summary>
+        public static string MainVIew_Menu_MapView {
+            get {
+                return ResourceManager.GetString("MainVIew_Menu_MapView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You don&apos;t have any device repositories.  Device repositories are used to manage and monitor your devices and can be created when you build your IoT applications.  Please click on the link below for more information..
         /// </summary>
         public static string MainView_NoDeviceRepos {
