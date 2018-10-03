@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
@@ -12,12 +12,12 @@
     <PackageReference Include="Microsoft.AppCenter.Push" Version="1.9.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
-    <PackageReference Include="LagoVista.Client.Core" Version="1.2.472-alpha1748" />
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.480-alpha1704" />
     <PackageReference Include="LagoVista.Core" Version="2.1.439-beta1607" />
     <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models" Version="2.1.439-beta1607" />
     <PackageReference Include="LagoVista.IoT.DeviceManagement.Models" Version="2.1.439-beta1607" />
     <PackageReference Include="LagoVista.UserAdmin.Models" Version="2.1.439-beta1607" />
-    <PackageReference Include="LagoVista.XPlat" Version="1.2.472-alpha1748" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.480-alpha1704" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="3.2.0.839982" />
   </ItemGroup>
   <ItemGroup>
