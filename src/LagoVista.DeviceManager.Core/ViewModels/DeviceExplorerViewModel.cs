@@ -6,6 +6,7 @@ using LagoVista.DeviceManager.Core.Resources;
 using LagoVista.IoT.DeviceAdmin.Models;
 using LagoVista.IoT.DeviceManagement.Core.Models;
 using System;
+using System.Collections.Generic;
 
 namespace LagoVista.DeviceManager.Core.ViewModels
 {
@@ -20,6 +21,16 @@ namespace LagoVista.DeviceManager.Core.ViewModels
             SelectDeviceTypeCommand = new RelayCommand(SelectDeviceType);
                       
             _client = client;
+
+            MenuItems = new List<MenuItem>()
+            {
+                 new MenuItem()
+                {
+                    Command = new RelayCommand(() => ViewModelNavigation.NavigateAsync<DeviceMapViewModel>(this)),
+                    Name = DeviceManagerResources.MainVIew_Menu_MapView,
+                    FontIconKey = "fa-users"
+                },
+            };
         }
 
         public async void SelectDeviceType()
