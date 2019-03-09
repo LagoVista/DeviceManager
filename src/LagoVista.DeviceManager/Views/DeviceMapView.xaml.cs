@@ -16,6 +16,12 @@ namespace LagoVista.DeviceManager.Views
 		public DeviceMapView ()
 		{
 			InitializeComponent ();
-		}
+            DevicesMap.GestureRecognizers.Add(new TapGestureRecognizer((view, obj) =>
+            {
+                var item = obj;
+
+            }));
+         
+        }
 	}
 }

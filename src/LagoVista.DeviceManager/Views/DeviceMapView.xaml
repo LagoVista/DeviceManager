@@ -8,11 +8,11 @@
     <pge:LagoVistaContentPage.MainContent>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="240" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <ListView ItemsSource="{Binding ListItems}" RowHeight="64" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"  >
+            <ListView ItemsSource="{Binding ListItems}" RowHeight="64" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" x:Name="DevicesList"  >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -25,18 +25,24 @@
                                     <ColumnDefinition Width="auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Id}"  x:Name="DeviceId" IsVisible="False" />
                                 <pge:Icon IconKey="fa-microchip"  Grid.Column="1" FontSize="24" VerticalOptions="Center" TextColor="{StaticResource NuvIoTContrast}"  />
                                 <Label Text="{Binding DeviceName}" Margin="8,0,0,0"  Grid.Column="2" FontSize="24" TextColor="{StaticResource NuvIoTDark}" VerticalOptions="Center" />
+                                <pge:IconButton IconKey="fa-map-pin" 
+                                            BindingContext="{Binding Source={x:Reference DevicesList}, Path=BindingContext}"
+                                            Command="{Binding ShowOnMapCommand}" 
+                                            CommandParameter="{Binding Source={x:Reference DeviceId}, Path=Text}" TextColor="Black" FontSize="20"  Grid.Column="3" 
+                                            BorderColor="Transparent" BorderWidth="0" Margin="0,0,0,0"
+                                            Grid.RowSpan="3" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <maps:Map Grid.Column="1"
-            x:Name="MyMap"
-            IsShowingUser="true"
-            MapType="Hybrid" />
+            <maps:Map Grid.Column="1" x:Name="DevicesMap" IsShowingUser="true" MapType="Hybrid"  >
+                
+            </maps:Map>
         </Grid >
     </pge:LagoVistaContentPage.MainContent>
 </pge:LagoVistaContentPage>

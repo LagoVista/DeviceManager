@@ -13,6 +13,11 @@ namespace LagoVista.DeviceManager.Core.ViewModels
     {
         IDeviceManagementClient _client;
 
+        public DeviceMapViewModel()
+        {
+
+        }
+
         public async void SelectDeviceType()
         {
             await ViewModelNavigation.NavigateAndPickAsync<DeviceTypePickerViewModel>(this, DeviceTypePicked);
@@ -21,6 +26,11 @@ namespace LagoVista.DeviceManager.Core.ViewModels
         public void SearchNow(Object searchTerm)
         {
             var term = searchTerm;
+        }
+
+        public void ShowOnMap(DeviceSummary summary)
+        {
+
         }
 
         public void DeviceTypePicked(object obj)
@@ -78,5 +88,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
         public RelayCommand AddNewDeviceCommand { get; }
         public RelayCommand SelectDeviceTypeCommand { get; }
         public RelayCommand SeachNowCommand { get; }
+        public RelayCommand<DeviceSummary> ShowOnMapCommand { get;  }
+
     }
 }

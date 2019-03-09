@@ -11,7 +11,21 @@
     HasToolBar="true" >
     <pge:LagoVistaContentPage.MainContent>
         <StackLayout>
-            <pge:FormViewer Form="{Binding FormAdapter}"  />
+            <pge:FormViewer Form="{Binding FormAdapter}" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Label Text="Geo Location" />
+                <pge:IconButton IconKey="fa-map-pin" Grid.Column="1" Grid.RowSpan="2" Command="{Binding SetLocationCommand}" 
+                                TextColor="Blue" FontSize="20"  BorderColor="Transparent" BorderWidth="0" Margin="0,0,0,0" />
+                <Label Grid.Row="1" Text="{Binding Location}" />
+            </Grid>
             <pge:FormViewer Form="{Binding CustomFieldAdapter, Mode=TwoWay}" />
         </StackLayout>
     </pge:LagoVistaContentPage.MainContent>
