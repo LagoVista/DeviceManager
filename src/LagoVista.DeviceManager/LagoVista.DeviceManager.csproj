@@ -12,12 +12,12 @@
     <PackageReference Include="Microsoft.AppCenter.Push" Version="1.13.2" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
-    <PackageReference Include="LagoVista.Client.Core" Version="1.2.669-alpha0801" />
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.669-alpha1404" />
     <PackageReference Include="LagoVista.Core" Version="2.1.656-beta1121" />
     <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models" Version="2.1.656-beta1121" />
     <PackageReference Include="LagoVista.IoT.DeviceManagement.Models" Version="2.1.656-beta1121" />
     <PackageReference Include="LagoVista.UserAdmin.Models" Version="2.1.656-beta1121" />
-    <PackageReference Include="LagoVista.XPlat" Version="1.2.669-alpha0801" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.669-alpha1404" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="3.6.0.220655" />
   </ItemGroup>
   <ItemGroup>
