@@ -80,7 +80,9 @@ namespace LagoVista.DeviceManager.Core.ViewModels
             launchArgs.Parameters.Add(MonitorDeviceViewModel.DeviceRepoId, LaunchArgs.ChildId);
             launchArgs.Parameters.Add(MonitorDeviceViewModel.DeviceId, model.Id);
 
-            ViewModelNavigation.NavigateAsync(launchArgs);
+            SelectedItem = null;
+
+            ViewModelNavigation.NavigateAsync(launchArgs);            
         }
 
         protected override string GetListURI()

@@ -25,12 +25,12 @@
                                     <ColumnDefinition Width="auto" />
                                 </Grid.ColumnDefinitions>
                                 <Label Text="{Binding Id}"  x:Name="RepoItemId" IsVisible="False" />
-                                <pge:Icon IconKey="fa-database"  Grid.Column="1" FontSize="24" VerticalOptions="Center" TextColor="{StaticResource NuvIoTContrast}" />
-                                <Label Text="{Binding Name}" Margin="8,0,0,0" Grid.Column="2" FontSize="24" TextColor="{StaticResource NuvIoTDark}" VerticalOptions="Center" />
-                                <pge:IconButton IconKey="fa-map" 
+                                <pge:Icon IconKey="fa-database"  Grid.Column="1" FontSize="24" VerticalOptions="Center" TextColor="{StaticResource NuvIoTBlack}" />
+                                <Label Text="{Binding Name}" Margin="8,0,0,0" Grid.Column="2" FontSize="24" TextColor="{StaticResource NuvIoTBlack}" FontFamily="Roboto" VerticalOptions="Center" />
+                               <!-- <pge:IconButton IconKey="fa-map" 
                                             BindingContext="{Binding Source={x:Reference RepositoriesList}, Path=BindingContext}"
                                             Command="{Binding MapDeviceRepoCommand}" 
-                                            CommandParameter="{Binding Source={x:Reference RepoItemId}, Path=Text}" TextColor="Black" FontSize="20"  Grid.Column="3" BorderColor="Transparent" BorderWidth="0" Margin="0,0,0,0" Grid.RowSpan="3" />
+                                            CommandParameter="{Binding Source={x:Reference RepoItemId}, Path=Text}" TextColor="Black" FontSize="20"  Grid.Column="3" BorderColor="Transparent" BorderWidth="0" Margin="0,0,0,0" Grid.RowSpan="3" />-->
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

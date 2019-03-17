@@ -38,8 +38,8 @@
                                     <ColumnDefinition Width="auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <pge:Icon IconKey="fa-microchip"  Grid.Column="1" FontSize="24" VerticalOptions="Center" TextColor="{StaticResource NuvIoTContrast}"  />
-                                <Label Text="{Binding DeviceName}" Margin="8,0,0,0"  Grid.Column="2" FontSize="24" TextColor="{StaticResource NuvIoTDark}" VerticalOptions="Center" />
+                                <pge:Icon IconKey="fa-microchip"  Grid.Column="1" FontSize="24" VerticalOptions="Center" TextColor="{StaticResource NuvIoTBlack}"  />
+                                <Label Text="{Binding DeviceName}" FontFamily="Roboto" Margin="8,0,0,0"  Grid.Column="2" FontSize="24" TextColor="{StaticResource NuvIoTBlack}" VerticalOptions="Center" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

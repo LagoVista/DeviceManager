@@ -245,10 +245,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LagoVista.Client.Core">
-      <Version>1.2.662-alpha1232</Version>
+      <Version>1.2.669-alpha0801</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Client.Devices">
-      <Version>1.2.662-alpha1232</Version>
+      <Version>1.2.669-alpha0801</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core">
       <Version>2.1.656-beta1121</Version>
@@ -272,7 +272,7 @@
       <Version>2.1.656-beta1121</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.XPlat">
-      <Version>1.2.662-alpha1232</Version>
+      <Version>1.2.669-alpha0801</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter">
       <Version>1.13.2</Version>
