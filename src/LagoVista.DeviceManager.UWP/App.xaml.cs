@@ -29,7 +29,10 @@ namespace LagoVista.DeviceManager.UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            
+
+
+            Xamarin.FormsMaps.Init("s5miuLzzn4RuPyMXzOYF~pA3KRBwzLZ4JOHnyIaUAWA~AnoR9G-Mf6OR7_n8b6wVy_cd9wim48xfSp39TC31OlvLad6zT5Pf0XN35EPuEV5U");
+
             UnhandledException += (sender, e) =>
             {
                 Debug.WriteLine("EXCPETION");

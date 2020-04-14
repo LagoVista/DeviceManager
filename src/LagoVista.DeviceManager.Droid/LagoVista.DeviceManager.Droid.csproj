@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
-    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidSupportedAbis>armeabi-v7a,x86</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup>
     <NoWarn>$(NoWarn);NU1605</NoWarn>
@@ -92,64 +92,67 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LagoVista.Client.Devices">
-      <Version>1.2.480-alpha1704</Version>
+      <Version>1.2.1063-alpha1808</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core">
-      <Version>2.1.439-beta1607</Version>
+      <Version>2.1.1064-beta1512</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core.Authentication">
-      <Version>2.1.439-beta1607</Version>
+      <Version>2.1.1064-beta1512</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core.Networking">
-      <Version>2.1.439-beta1607</Version>
+      <Version>2.1.1064-beta1512</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.IoT.Deployment.Models">
-      <Version>2.1.439-beta1607</Version>
+      <Version>2.1.1064-beta1512</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models">
-      <Version>2.1.439-beta1607</Version>
+      <Version>2.1.1064-beta1512</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.IoT.DeviceMessaging.Models">
-      <Version>2.1.439-beta1607</Version>
+      <Version>2.1.1064-beta1512</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.IoT.Logging">
-      <Version>2.1.439-beta1607</Version>
+      <Version>2.1.1064-beta1512</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.IoT.Pipeline.Models">
-      <Version>2.1.439-beta1607</Version>
+      <Version>2.1.1064-beta1512</Version>
+    </PackageReference>
+    <PackageReference Include="LagoVista.MediaServices.Models">
+      <Version>2.1.1064-beta1512</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.UserAdmin.Models">
-      <Version>2.1.439-beta1607</Version>
+      <Version>2.1.1064-beta1512</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter">
-      <Version>1.9.0</Version>
+      <Version>3.1.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
-      <Version>1.9.0</Version>
+      <Version>3.1.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Crashes">
-      <Version>1.9.0</Version>
+      <Version>3.1.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Distribute">
-      <Version>1.9.0</Version>
+      <Version>3.1.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Push">
-      <Version>1.9.0</Version>
+      <Version>3.1.0</Version>
     </PackageReference>
     <PackageReference Include="Portable.BouncyCastle">
-      <Version>1.8.3</Version>
+      <Version>1.8.6.7</Version>
     </PackageReference>
     <PackageReference Include="WindowsAzure.Storage">
-      <Version>9.3.0</Version>
+      <Version>9.3.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>3.1.0.697729</Version>
+      <Version>4.5.0.617</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Client.Core">
-      <Version>1.2.480-alpha1704</Version>
+      <Version>1.2.1063-alpha1808</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.XPlat">
-      <Version>1.2.480-alpha1704</Version>
+      <Version>1.2.1063-alpha1622</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -158,24 +161,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splashbg.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nuviot.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\softwarelogistics.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splashbg.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\nuviot.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LagoVista.DeviceManager\LagoVista.DeviceManager.csproj">
@@ -186,9 +174,6 @@
       <Project>{13BC3985-C830-4176-A1BB-E3253E503B45}</Project>
       <Name>LagoVista.DeviceManager.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splashscreen.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -212,16 +197,28 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon_actionbar.png" />
+    <AndroidAsset Include="Assets\appicon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon_notif.png" />
+    <AndroidAsset Include="Assets\slsys.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\icon_actionbar.png" />
+    <AndroidResource Include="Resources\drawable\applogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\icon_notif.png" />
+    <AndroidResource Include="Resources\drawable\companylogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-ldpi\splash.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-mpi\icon_actionbar.png" />
@@ -248,10 +245,16 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icon_notif.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\icon_notif.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\icon_actionbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_notif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\icon_actionbar.png" />
@@ -260,10 +263,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\icon_notif.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\appicon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\slsys.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

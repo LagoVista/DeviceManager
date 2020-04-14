@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pge:LagoVistaContentPage
+    xmlns:pge="clr-namespace:LagoVista.XPlat.Core;assembly=LagoVista.XPlat.Core"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="LagoVista.DeviceManager.Views.DeviceMapView">
+    <pge:LagoVistaContentPage.MainContent>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView ItemsSource="{Binding ListItems}" RowHeight="64" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" x:Name="DevicesList"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid HeightRequest="64" Padding="0,16,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="32" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="8" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Id}"  x:Name="DeviceId" IsVisible="False" />
+                                <pge:Icon IconKey="fa-microchip"  Grid.Column="1" FontSize="24" VerticalOptions="Center" TextColor="{StaticResource NuvIoTContrast}"  />
+                                <Label Text="{Binding DeviceName}" Margin="8,0,0,0"  Grid.Column="2" FontSize="24" TextColor="{StaticResource NuvIoTDark}" VerticalOptions="Center" />
+                                <pge:IconButton IconKey="fa-map-pin" 
+                                            BindingContext="{Binding Source={x:Reference DevicesList}, Path=BindingContext}"
+                                            Command="{Binding ShowOnMapCommand}" 
+                                            CommandParameter="{Binding Source={x:Reference DeviceId}, Path=Text}" TextColor="Black" FontSize="20"  Grid.Column="3" 
+                                            BorderColor="Transparent" BorderWidth="0" Margin="0,0,0,0"
+                                            Grid.RowSpan="3" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <maps:Map Grid.Column="1" x:Name="DevicesMap" IsShowingUser="true" MapType="Hybrid"  >
+                
+            </maps:Map>
+        </Grid >
+    </pge:LagoVistaContentPage.MainContent>
+</pge:LagoVistaContentPage>

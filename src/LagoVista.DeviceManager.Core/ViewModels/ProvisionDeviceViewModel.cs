@@ -40,7 +40,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
 
             var deviceTypeSummary = obj as DeviceTypeSummary;
 
-            Model.DeviceType = new LagoVista.Core.Models.EntityHeader() { Id = deviceTypeSummary.Id, Text = deviceTypeSummary.Name };
+            Model.DeviceType = new LagoVista.Core.Models.EntityHeader<DeviceType>() { Id = deviceTypeSummary.Id, Text = deviceTypeSummary.Name };
             Model.DeviceConfiguration = new LagoVista.Core.Models.EntityHeader() { Id = deviceTypeSummary.DefaultDeviceConfigId, Text = deviceTypeSummary.DefaultDeviceConfigName };
             View[nameof(Model.DeviceType).ToFieldKey()].Display = Model.DeviceType.Text;
             View[nameof(Model.DeviceType).ToFieldKey()].Value = Model.DeviceType.Id;
@@ -54,7 +54,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
                 {
                     foreach (var field in result.Result)
                     {
-                        var formField = FormField.Create(field.Key, new FormFieldAttribute());
+                        var formField = FormField.Create(field.Key, new FormFieldAttribute(), null);
 
                         formField.Label = field.Label;
 

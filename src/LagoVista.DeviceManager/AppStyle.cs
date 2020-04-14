@@ -8,15 +8,15 @@ namespace LagoVista.DeviceManager
 {
     class AppStyle : IAppStyle
     {
-        public Color TitleBarBackground => NamedColors.NuvIoTMedium;
+        public Color TitleBarBackground => NamedColors.NuvIoTWhite;
 
-        public Color TitleBarText => NamedColors.NuvIoTWhite;
+        public Color TitleBarText => NamedColors.NuvIoTBlack;
 
         public Color PageBackground => NamedColors.White;
 
         public Color PageText => Color.CreateColor(0x33, 0x33, 0x33);
 
-        public Color LabelText => Color.CreateColor(0x33, 0x33, 0x33);
+        public Color LabelText => NamedColors.Black;
 
         public Color EditControlBackground => NamedColors.White;
 
@@ -40,7 +40,7 @@ namespace LagoVista.DeviceManager
 
         public Color ButtonBorder => NamedColors.NuvIoTBlack;
 
-        public Color ButtonForeground => NamedColors.NuvIoTWhite;
+        public Color ButtonForeground => NamedColors.White;
 
         public Color ButtonBackgroundActive => NamedColors.NuvIoTWhite;
 

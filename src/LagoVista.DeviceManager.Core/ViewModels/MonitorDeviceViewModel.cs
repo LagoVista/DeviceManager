@@ -137,7 +137,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
                             }
                         });
                         break;
-                    case "LagoVista.IoT.DeviceManagement.Core.Models.Device":
+                    case "Device":
                         DispatcherServices.Invoke(() =>
                         {
                             Device = JsonConvert.DeserializeObject<Device>(notification.Payload);

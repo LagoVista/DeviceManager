@@ -21,6 +21,8 @@ namespace LagoVista.DeviceManager.Core.ViewModels
 
         public ManageDeviceViewModel()
         {
+            SetLocationCommand = new RelayCommand(SetLocation);
+
         }
 
         public override Task<InvokeResult> SaveRecordAsync()
@@ -31,18 +33,27 @@ namespace LagoVista.DeviceManager.Core.ViewModels
             });
         }
 
+        public void SetLocation()
+        {
+            ViewModelNavigation.NavigateAndPickAsync<DeviceMapViewModel>(this, (location) =>
+            {
+
+            });
+        }
+
         private  void ShowProperties()
         {
             PerformNetworkOperation(async () =>
             {
                 var result = await RestClient.GetAsync<List<CustomField>>($"/api/deviceconfig/{Model.DeviceConfiguration.Id}/properties");
                 var fields = new Dictionary<string, FormField>();
+
                 var adapter = new EditFormAdapter(Model.Properties, fields, ViewModelNavigation);
                 if (result.Result != null)
                 {
                     foreach (var field in result.Result)
                     {
-                        var formField = FormField.Create(field.Key, new FormFieldAttribute());
+                        var formField = FormField.Create(field.Key, new FormFieldAttribute(), null);
 
                         formField.Label = field.Label;
 
@@ -126,6 +137,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
             form.AddViewCell(nameof(Model.DeviceId));
             form.AddViewCell(nameof(Model.SerialNumber));
             form.AddViewCell(nameof(Model.DeviceType));
+            form.AddViewCell(nameof(Model.GeoLocation));
 
             ShowProperties();
         }
@@ -137,5 +149,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
 
             return $"/api/device/{_deviceRepoId}/{_deviceId}";
         }        
+
+        public RelayCommand SetLocationCommand { get; }
     }
 }

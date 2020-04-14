@@ -31,9 +31,9 @@ namespace LagoVista.DeviceManager
 
         public string AppName => "IoT Device Manager";
 
-        public string AppLogo => "appicon.png";
+        public string AppLogo => "applogo.png";
 
-        public string CompanyLogo => "slsys.png";
+        public string CompanyLogo => "copanylogo.png";
 #if DEBUG
         public bool EmitTestingCode => true;
 #else
@@ -54,5 +54,14 @@ namespace LagoVista.DeviceManager
         public string TermsAndConditionsLink => "https://app.termly.io/document/terms-of-use-for-saas/90eaf71a-610a-435e-95b1-c94b808f8aca";
 
         public string PrivacyStatementLink => "https://app.termly.io/document/privacy-policy-for-website/f0b67cde-2a08-4fe8-a35e-5e4571545d00";
+
+        public AuthTypes AuthType => AuthTypes.User;
+
+        public string APIToken =>  String.Empty;
+
+        public string InstanceId { get; set;}
+        public string InstanceAuthKey { get; set; }
+        public string DeviceId { get; set; }
+        public string DeviceRepoId { get; set; }
     }
 }

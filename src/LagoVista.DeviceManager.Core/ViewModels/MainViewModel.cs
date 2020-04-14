@@ -10,6 +10,7 @@ using System.Text;
 using LagoVista.IoT.DeviceManagement.Core.Models;
 using LagoVista.Client.Core.ViewModels.Other;
 using System.Threading.Tasks;
+using LagoVista.DeviceManager.Core.Resources;
 
 namespace LagoVista.DeviceManager.Core.ViewModels
 {
@@ -17,8 +18,10 @@ namespace LagoVista.DeviceManager.Core.ViewModels
     {
         public MainViewModel()
         {
+            MapDeviceRepoCommand = new RelayCommand(MapRepo);
+
             MenuItems = new List<MenuItem>()
-            {
+            {                 
                 new MenuItem()
                 {
                     Command = new RelayCommand(() => ViewModelNavigation.NavigateAsync<UserOrgsViewModel>(this)),
@@ -79,6 +82,11 @@ namespace LagoVista.DeviceManager.Core.ViewModels
             }
         }
 
+        public async void MapRepo(object repoId)
+        {
+            await NavigateAndViewAsync<DeviceMapViewModel>(repoId.ToString());
+        }
+
         public RelayCommand ShowIoTAppStudioCommand { get; private set; }
 
         protected override async void ItemSelected(DeviceRepositorySummary model)
@@ -90,5 +98,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
         {
             return $"/api/devicerepos";
         }
+
+        public RelayCommand MapDeviceRepoCommand { get; private set; }
     }
 }
