@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.software_logistics.devicemanager.localdev" android:versionCode="1" android:versionName="1.0.999.9999">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<permission android:protectionLevel="signature" android:name="com.software_logistics.devicemanager.localdev.permission.C2D_MESSAGE" />
 	<uses-permission android:name="com.com.software_logistics.devicemanager.localdev.permission.C2D_MESSAGE" />

@@ -53,7 +53,7 @@ namespace LagoVista.DeviceManager.Core.ViewModels
                 {
                     foreach (var field in result.Result)
                     {
-                        var formField = FormField.Create(field.Key, new FormFieldAttribute());
+                        var formField = FormField.Create(field.Key, new FormFieldAttribute(), null);
 
                         formField.Label = field.Label;
 
