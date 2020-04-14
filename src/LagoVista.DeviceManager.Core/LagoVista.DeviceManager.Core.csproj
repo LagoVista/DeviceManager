@@ -5,19 +5,19 @@
     <DebugType>PdbOnly</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="LagoVista.Client.Devices" Version="1.2.1063-alpha1622" />
+    <PackageReference Include="LagoVista.Client.Devices" Version="1.2.1063-alpha1808" />
     <PackageReference Include="Microsoft.AppCenter" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="3.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="LagoVista.Client.Core" Version="1.2.1063-alpha1622" />
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.1063-alpha1808" />
     <PackageReference Include="LagoVista.Core" Version="2.1.1064-beta1512" />
     <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models" Version="2.1.1064-beta1512" />
     <PackageReference Include="LagoVista.IoT.DeviceManagement.Models" Version="2.1.1064-beta1512" />
     <PackageReference Include="LagoVista.UserAdmin.Models" Version="2.1.1064-beta1512" />
-    <PackageReference Include="LagoVista.XPlat" Version="1.2.1063-alpha1622" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.1063-alpha1808" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\DeviceManagerResources.Designer.cs">
