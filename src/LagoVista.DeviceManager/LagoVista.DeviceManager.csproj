@@ -23,9 +23,4 @@
   <ItemGroup>
     <ProjectReference Include="..\LagoVista.DeviceManager.Core\LagoVista.DeviceManager.Core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Views\DeviceMapView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
 </Project>
