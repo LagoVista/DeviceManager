@@ -92,7 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LagoVista.Client.Devices">
-      <Version>1.2.1063-alpha1808</Version>
+      <Version>1.2.1064-alpha1046</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core">
       <Version>2.1.1064-beta1512</Version>
@@ -146,13 +146,13 @@
       <Version>9.3.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.5.0.530</Version>
+      <Version>4.5.0.396</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Client.Core">
-      <Version>1.2.1063-alpha1808</Version>
+      <Version>1.2.1064-alpha1046</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.XPlat">
-      <Version>1.2.1063-alpha1808</Version>
+      <Version>1.2.1064-alpha1046</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
