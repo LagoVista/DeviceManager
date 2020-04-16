@@ -72,6 +72,7 @@
     <CodesignKey>iPhone Developer: Kevin Wolf (72PRC8T8A7)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignProvision>VS: com.software-logistics.devicemanager.dev Development</CodesignProvision>
+    <MtouchLink>Full</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
