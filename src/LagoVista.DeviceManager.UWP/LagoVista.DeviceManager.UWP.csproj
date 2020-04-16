@@ -271,6 +271,9 @@
     <PackageReference Include="LagoVista.IoT.Pipeline.Models">
       <Version>2.1.1064-beta1512</Version>
     </PackageReference>
+    <PackageReference Include="LagoVista.MediaServices.Models">
+      <Version>2.1.1064-beta1512</Version>
+    </PackageReference>
     <PackageReference Include="LagoVista.XPlat">
       <Version>1.2.1065-alpha1210</Version>
     </PackageReference>
