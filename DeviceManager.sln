@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LagoVista.DeviceManager.Core", "src\LagoVista.DeviceManager.Core\LagoVista.DeviceManager.Core.csproj", "{13BC3985-C830-4176-A1BB-E3253E503B45}"
 EndProject
@@ -277,6 +277,7 @@ Global
 		{43EFDC19-773F-49DC-BE4D-EC4069EC0C3C}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{43EFDC19-773F-49DC-BE4D-EC4069EC0C3C}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{43EFDC19-773F-49DC-BE4D-EC4069EC0C3C}.Debug|iPhone.Build.0 = Debug|iPhone
+		{43EFDC19-773F-49DC-BE4D-EC4069EC0C3C}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{43EFDC19-773F-49DC-BE4D-EC4069EC0C3C}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{43EFDC19-773F-49DC-BE4D-EC4069EC0C3C}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{43EFDC19-773F-49DC-BE4D-EC4069EC0C3C}.Debug|x64.ActiveCfg = Debug|iPhone
@@ -345,7 +346,6 @@ Global
 		{E90DEDAC-C212-4872-9A2E-7A57C8701940}.Debug|ARM.Deploy.0 = Debug|Any CPU
 		{E90DEDAC-C212-4872-9A2E-7A57C8701940}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{E90DEDAC-C212-4872-9A2E-7A57C8701940}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{E90DEDAC-C212-4872-9A2E-7A57C8701940}.Debug|iPhone.Deploy.0 = Debug|Any CPU
 		{E90DEDAC-C212-4872-9A2E-7A57C8701940}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{E90DEDAC-C212-4872-9A2E-7A57C8701940}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{E90DEDAC-C212-4872-9A2E-7A57C8701940}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
