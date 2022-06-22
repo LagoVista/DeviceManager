@@ -9,7 +9,7 @@
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.910310" />
     <PackageReference Include="LagoVista.Client.Core" Version="1.2.1065-alpha1423" />
     <PackageReference Include="LagoVista.Core" Version="2.1.1064-beta1512" />
